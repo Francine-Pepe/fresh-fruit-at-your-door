@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styles from "./Navbar.css";
+import "./Navbar.css";
 import Logo from "./../Assets/logo_FreshFruit_transparent_bg_small.png";
 
 const Navbar = () => {
@@ -28,16 +28,14 @@ const Navbar = () => {
   ];
   return (
     <>
-      <div className={styles.navbar_container}>
-        <div className={styles.logo}>
-          <NavLink to={"/home"}>
+      <div className="navbar_container">
+          <NavLink to={"/"}>
             <img src={Logo} alt="logo" width={200} height={"auto"} />
           </NavLink>
-        </div>
-        <nav className={styles.nav}>
+        <nav className="nav">
           <ul>
             {navbar.map((navbar, index) => (
-              <li className={styles.navbar} key={index}>
+              <li className="navbar" key={index}>
                 <NavLink to={navbar.link}>{navbar.name}</NavLink>
               </li>
             ))}
