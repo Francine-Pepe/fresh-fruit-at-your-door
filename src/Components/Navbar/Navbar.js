@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 import Logo from "./../Assets/logo_FreshFruit_transparent_bg_small.png";
 
 const Navbar = () => {
@@ -28,20 +28,21 @@ const Navbar = () => {
   ];
   return (
     <>
-      <div className="navbar_container">
+      <div className={styles.navbar_container}>
+        <div className={styles.logo}>
           <NavLink to={"/"}>
             <img src={Logo} alt="logo" width={200} height={"auto"} />
           </NavLink>
-        <nav className="nav">
+        </div>
+        <nav className={styles.nav}>
           <ul>
             {navbar.map((navbar, index) => (
-              <li className="navbar" key={index}>
+              <li className={styles.navbar} key={index}>
                 <NavLink to={navbar.link}>{navbar.name}</NavLink>
               </li>
             ))}
           </ul>
         </nav>
-
       </div>
     </>
   );

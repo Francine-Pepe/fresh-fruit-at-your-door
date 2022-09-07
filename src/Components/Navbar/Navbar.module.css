@@ -5,32 +5,36 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding: 3.188rem 1rem 0 1rem;
-  
+  padding-top: 3.188rem;
+  position: absolute;
+  z-index: 2;
 }
 
-.nav {
-    display: flex;
-    width: 47.063rem;
-    padding: 0 2rem;
+.nav > div {
+  display: flex;
+  width: 50%;
 }
 
 .nav ul {
   display: flex;
   gap: 3.75rem;
   list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
-  
 }
 
 .nav li {
   text-decoration: none;
+  margin: 0;
 }
 
 nav a {
   text-decoration: none;
   color: #ffffff;
   font-family: "Raleway Black";
+}
+
+
+.logo > div {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
 }
