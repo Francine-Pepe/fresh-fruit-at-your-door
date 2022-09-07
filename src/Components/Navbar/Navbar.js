@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import Logo from "./../Assets/logo_FreshFruit_transparent_bg_small.png";
+import Dropdown from "./Dropdown";
 
 const Navbar = () => {
   const navbar = [
@@ -33,6 +34,9 @@ const Navbar = () => {
           <NavLink to={"/"}>
             <img src={Logo} alt="logo" width={200} height={"auto"} />
           </NavLink>
+          <label htmlFor="toggler">
+            <Dropdown />
+          </label>
         </div>
         <nav className={styles.nav}>
           <ul>
