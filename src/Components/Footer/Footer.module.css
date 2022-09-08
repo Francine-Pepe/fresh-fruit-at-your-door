@@ -23,10 +23,17 @@
   display: block;
 }
 
-.footer_content .fruit_season a {
+.footer_content .fruit_season a
+ {
   font-family: Raleway;
   font-weight: bold;
 }
+
+.footer_content .fruit_season a:hover,
+.footer_content nav a:hover {
+  color: #F23D91;
+}
+
 
 .footer_content .fruit_season h3 {
   font-family: "Raleway Black";

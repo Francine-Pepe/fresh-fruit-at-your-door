@@ -60,5 +60,7 @@ export const howItWorksText = [
   {
     title: "How Fresh Fruits at your door works?",
     text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    button: "Read more",
+    link: "/howitworks"
   },
 ];
