@@ -59,7 +59,7 @@ nav a {
 
 /* Media Queries */
 
-@media only screen and (min-width: 955px) {
+@media only screen and (min-width: 954px) {
   .dropdown_menu {
     display: none;
   }
