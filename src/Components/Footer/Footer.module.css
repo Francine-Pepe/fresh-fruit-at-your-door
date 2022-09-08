@@ -13,6 +13,8 @@
   align-items: center;
   justify-content: center;
   font-family: "Source Serif Pro";
+  /* border: 1px solid red; */
+  
 }
 
 .footer_content nav a {
@@ -29,6 +31,10 @@
 .footer_content .fruit_season h3 {
   font-family: "Raleway Black";
   color: #707070;
+}
+
+#footer_hr hr {
+  display: none;
 }
 
 /* SocialMedia.js CSS */
@@ -51,10 +57,19 @@
     flex-direction: column-reverse;
     height: auto;
     gap: 2rem;
+    
   }
 
   .footer_content {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    /* padding: 2rem; */
+  }
+
+  #footer_hr  {
+    width: 50%;
+    display: block;
+    position: relative;
+    left: 25%;
   }
 }

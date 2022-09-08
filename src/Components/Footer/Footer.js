@@ -21,6 +21,7 @@ function Footer() {
           <SocialMedia />
           <small>&copy; Copyright {getCurrentYear()} - Francine Pêpe</small>
         </div>
+        <hr id={styles.footer_hr} />
 
         <div className={styles.footer_content}>
           {fruitSeason.map((data, index) => {
@@ -34,7 +35,7 @@ function Footer() {
             );
           })}
         </div>
-
+        <hr id={styles.footer_hr} />
         <div className={styles.footer_content}>
           {navData.map((data, index) => {
             return (
