@@ -1,21 +1,31 @@
-import React from 'react';
-import styles from './HowItWorks.module.css';
+import React from "react";
+import styles from "./HowItWorks.module.css";
+import { howItWorksText } from "../../data";
 
 function HowItWorks() {
   return (
     <>
-    <main className={styles.main_container}>
-      <div className={styles.left_container}>
+      <main className={styles.how_it_works_main_container}>
+        <div className={styles.how_it_works_left_content}>
+          <div className={styles.how_it_works_preview}>
+            {howItWorksText.map((data, index) => {
+              return (
+                <>
+                  <h2 key={index}>{data.title}</h2>
+                  <hr id={styles.preview_hr} />
+                  <div className={styles.how_it_works_preview_text}>
+                    <p>{data.text}</p>
+                  </div>
+                </>
+              );
+            })}
+          </div>
+        </div>
 
-      </div>
-
-      <div className={styles.right_container}>
-
-      </div>
-
-    </main>
+        <div className={styles.how_it_works_right_content}></div>
+      </main>
     </>
-  )
+  );
 }
 
-export default HowItWorks
+export default HowItWorks;

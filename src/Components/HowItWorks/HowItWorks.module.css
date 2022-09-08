@@ -1,12 +1,103 @@
-.main_container {
-    width: 100%;
-    display: flex;
+.how_it_works_main_container {
+  width: 100%;
+  display: flex;
 }
 
-.left_container,
-.right_container {
-    width: 50%;
-    height: 33.75rem;
-    background-color:aqua;
-    border: 1px solid red;
+.how_it_works_left_content,
+.how_it_works_right_content {
+  width: 50%;
+  height: 33.75rem;
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+.how_it_works_right_content {
+  background-image: url("../Assets/how_it_works_1920X1280.jpg");
+  width: 50%;
+  height: 33.75rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.how_it_works_preview {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.how_it_works_preview hr {
+  width: 20%;
+  height: 0.25rem;
+  background-color: #f23d91;
+}
+
+.how_it_works_preview_text p,
+.how_it_works_preview h2 {
+  color: #707070;
+}
+
+.how_it_works_preview_text p {
+  padding: 0 5rem;
+}
+
+.how_it_works_preview h2 {
+  font-family: "Raleway";
+  font-size: 2rem;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  .how_it_works_main_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .how_it_works_left_content,
+  .how_it_works_right_content {
+    width: 100%;
+  }
+
+  .how_it_works_right_content {
+    border-bottom: 10px #39bf99 solid;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .how_it_works_preview h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .how_it_works_preview h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .how_it_works_preview h2 {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  .how_it_works_preview_text p {
+    padding: 0 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .how_it_works_preview h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .how_it_works_preview_text p {
+    padding: 0 2rem;
+    font-size: 0.813rem;
+
+  }
 }
