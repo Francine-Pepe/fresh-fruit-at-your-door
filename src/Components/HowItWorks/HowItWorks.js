@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./HowItWorks.module.css";
 import { howItWorksText } from "../../data";
+import { Button } from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
 
 function HowItWorks() {
   return (
@@ -16,6 +18,11 @@ function HowItWorks() {
                   <div className={styles.how_it_works_preview_text}>
                     <p>{data.text}</p>
                   </div>
+                  <NavLink to={data.link} target="_blank">
+                    <Button color="#707070" variant="outline" borderColor="#707070" >
+                      {data.button}
+                    </Button>
+                  </NavLink>
                 </>
               );
             })}

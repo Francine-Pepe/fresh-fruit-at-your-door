@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import styles from './HowItWorks.module.css';
 
 function HowItWorksFullPage() {
   return (
-    <div>HowItWorksFullPage</div>
-  )
+    <>
+      <main className={styles.how_it_works_full_page_container}>
+        
+      </main>
+    </>
+  );
 }
 
-export default HowItWorksFullPage
+export default HowItWorksFullPage;
