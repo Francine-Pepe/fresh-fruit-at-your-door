@@ -1,0 +1,12 @@
+.main_container {
+    width: 100%;
+    display: flex;
+}
+
+.left_container,
+.right_container {
+    width: 50%;
+    height: 33.75rem;
+    background-color:aqua;
+    border: 1px solid red;
+}

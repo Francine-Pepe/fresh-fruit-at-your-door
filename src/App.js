@@ -6,6 +6,7 @@ import FruitCatalogue from "./Components/FruitCatalogue/FruitCatalogue";
 import HowItWorks from "./Components/HowItWorks/HowItWorks";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
