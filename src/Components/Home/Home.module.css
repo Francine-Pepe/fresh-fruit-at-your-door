@@ -13,6 +13,7 @@
   position: relative;
   z-index: -1;
   border-bottom: 10px #39bf99 solid;
+  background-color: #ffff;
 }
 
 .home_text_container {

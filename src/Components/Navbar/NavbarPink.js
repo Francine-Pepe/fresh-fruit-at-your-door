@@ -5,7 +5,7 @@ import Logo from "./../Assets/logo_FreshFruit_transparent_bg_small.png";
 import Dropdown from "./Dropdown";
 import { navData } from "../../data";
 
-const Navbar = () => {
+const NavbarPink = () => {
   return (
     <>
       <div className={styles.navbar_container}>
@@ -17,12 +17,12 @@ const Navbar = () => {
             <Dropdown />
           </label>
         </div>
-        <nav className={styles.nav}>
+        <nav className={styles.nav_pink}>
           <ul>
             {navData.map((data, index) => {
               return (
                 <li className={styles.navbar} key={index}>
-                  <NavLink to={data.link}>{data.name}</NavLink>
+                  <NavLink  to={data.link}>{data.name}</NavLink>
                 </li>
               );
             })}
@@ -33,4 +33,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarPink;

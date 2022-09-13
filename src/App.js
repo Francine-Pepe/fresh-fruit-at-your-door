@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Contact from "./Components/Contact/Contact";
@@ -11,7 +11,7 @@ import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <>
-    <BrowserRouter>
+      <BrowserRouter>
         <Navbar />
         <Routes>
           <Route index path="/" element={<Home />} />

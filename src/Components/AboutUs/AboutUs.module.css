@@ -1,0 +1,9 @@
+.about_us_container {
+  width: 100%;
+  height: 86rem;
+  /* background-image: url("../Assets/aboutUs_appleBox.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}

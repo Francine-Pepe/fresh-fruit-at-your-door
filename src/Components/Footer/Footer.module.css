@@ -56,6 +56,10 @@
   padding: 2rem;
 }
 
+.social_media_container a:hover {
+  filter: invert(36%) sepia(51%) saturate(3529%) hue-rotate(310deg) brightness(99%) contrast(92%);
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 768px) {

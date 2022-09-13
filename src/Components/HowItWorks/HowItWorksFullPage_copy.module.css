@@ -1,0 +1,39 @@
+.how_it_works_full_page_container {
+    width: 100vw;
+    height: auto;
+    background-image: url("../Assets/how_it_works_1920X1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .how_it_works_full_page_content {
+    width: 100vw;
+    height: 70vh;
+    background-color: rgba(255, 255, 255, 0.21);
+    backdrop-filter: blur(20px);
+    top: 30%;
+    position: relative;
+    padding: 5rem 8rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .how_it_works_full_page_content_title h2,
+  .how_it_works_full_page_content_text {
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .how_it_works_full_page_content_title h2 {
+    font-family: "Raleway";
+    font-size: 3rem;
+    z-index: 1;
+    position: relative;
+    margin-top: -7.5rem;
+  }
+  
+  .how_it_works_full_page_content_text {
+      line-height: 1.875;
+  }
+  
