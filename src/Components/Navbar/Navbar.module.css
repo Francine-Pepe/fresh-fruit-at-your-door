@@ -33,6 +33,12 @@ nav a {
   font-family: "Raleway Black";
 }
 
+.nav_pink a {
+  text-decoration: none;
+  color: #F23D91;
+  font-family: "Raleway Black";
+}
+
 .logo > div {
   width: 50%;
   display: flex;

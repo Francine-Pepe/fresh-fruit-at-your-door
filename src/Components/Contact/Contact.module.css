@@ -1,0 +1,9 @@
+.contact_container {
+    width: 100%;
+    height: 86rem;
+    background-image: url("./../Assets/contact_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
