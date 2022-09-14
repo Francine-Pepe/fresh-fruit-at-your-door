@@ -4,6 +4,7 @@ import wallet from "./Components/Assets/wallet.png";
 import delivery from "./Components/Assets/delivery-truck.png";
 import fruit from "./Components/Assets/fruit.png";
 import questions from "./Components/Assets/conversation.png";
+import { Icon } from "@iconify/react";
 
 export const navData = [
   {
@@ -100,5 +101,36 @@ export const howItWorksText = [
     text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     button: "Continue reading...",
     link: "/howitworks",
+  },
+];
+
+export const addressData = [
+  {
+    icon: (
+      <Icon
+        icon="clarity:map-marker-line"
+        color="#707070"
+        width="60"
+        height="59"
+      />
+    ),
+    title: "Address",
+    address: "Martinstraße, 78 \n 22333 - Berlin - Germany",
+  },
+];
+
+export const contactData = [
+  {
+    icon: (
+      <Icon
+        icon="fluent:phone-laptop-24-regular"
+        color="#707070"
+        width="64"
+        height="59"
+      />
+    ),
+    title: "Contact",
+    telephone: "+49 02544 8976530",
+    email: "contact@freshfruit.de",
   },
 ];
