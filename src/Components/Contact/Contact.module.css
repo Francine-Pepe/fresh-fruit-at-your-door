@@ -1,9 +1,133 @@
 .contact_container {
-    width: 100%;
-    height: 86rem;
-    background-image: url("./../Assets/contact_bg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  max-width: 100%;
+  height: 86rem;
+  background-image: url("./../Assets/contact_bg_medium.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2.625rem;
+}
+
+.contact_content {
+  width: 50vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 2.625rem;
+  border-radius: 5px;
+}
+
+.address_contact_container {
+  width: 100%;
+  height: 23.688rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-radius: 5px;
+}
+
+.contacts {
+  width: 50%;
+  height: 11.844rem;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0;
+/* word-break: break-word; */
+}
+
+.contacts span {
+  white-space: pre;
+  text-align: center;
+}
+
+.contacts h3 {
+  font-family: "Source Serif Pro";
+  text-transform: uppercase;
+  color: #f23d91;
+  font-size: 1.5rem;
+}
+
+.contacts p {
+  font-family: "Source Serif Pro";
+  font-size: 1rem;
+  color: #707070;
+  
+}
+
+.we_are_here {
+  position: relative;
+  right: 50%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2rem;
+  color: #707070;
+}
+
+.we_are_here h2 {
+  font-size: 1.5rem;
+  font-family: Raleway;
+  font-weight: thin;
+}
+
+/* ContactMap CSS */
+
+.map_container {
+  width: 50vw;
+  border-radius: 5px;
+}
+
+.map_container:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 954px) {
+  .contact_container {
+    justify-content: center;
+    align-items: center;
+    padding: 2.625rem;
   }
+
+  .contact_content,
+  .map_container {
+    width: 100vw;
+    align-items: center;
+    padding: 2.625rem;
+  }
+
+  .we_are_here {
+    right: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .address_contact_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact_content,
+  .map_container {
+    overflow: hidden;
+    padding: 1rem;
+  }
+}
