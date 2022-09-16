@@ -1,17 +1,51 @@
-import React from 'react';
-import styles from './AboutUs.module.css';
+import React from "react";
+import styles from "./AboutUs.module.css";
+import AboutUsProps from "./AboutUsProps";
+import { aboutUsImagesLeft, aboutUsImagesRight, aboutUsText } from "../../data";
 
-function AboutUs() {
+function AboutUs(props) {
   return (
     <>
-    <div className={styles.about_us_container}>
-      <div className={styles.about_us_content}>
+      <div className={styles.about_us_container}>
+        {aboutUsImagesLeft.map((data, index) => {
+          return (
+            <>
+              <AboutUsProps
+                image1={data.image1}
+                image2={data.image2}
+                image3={data.image3}
+              />
+            </>
+          );
+        })}
 
+        <div className={styles.about_us_text_container}>
+          {aboutUsText.map((data, index) => {
+            return (
+              <>
+                <div className={styles.about_us_content}>
+                  <h1>{data.title}</h1>
+                  <p>{data.text}</p>
+                </div>
+              </>
+            );
+          })}
+        </div>
+
+        {aboutUsImagesRight.map((data, index) => {
+          return (
+            <>
+              <AboutUsProps
+                image1={data.image1}
+                image2={data.image2}
+                image3={data.image3}
+              />
+            </>
+          );
+        })}
       </div>
-
-    </div>
     </>
-  )
+  );
 }
 
-export default AboutUs
+export default AboutUs;

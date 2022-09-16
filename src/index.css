@@ -2,7 +2,21 @@ body {
   height: 100%;
   margin: 0 auto;
   overflow-x: hidden;
-  font-family: "Raleway", sans-serif;
-  font-family: "Source Serif Pro", serif;
 }
 
+p {
+  font-family: "Source Serif Pro", serif;
+  color: #707070;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Raleway", sans-serif;
+  font-weight: thin;
+}
+
+h1 {
+  color: #f23d91;
+}

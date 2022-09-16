@@ -5,6 +5,12 @@ import delivery from "./Components/Assets/delivery-truck.png";
 import fruit from "./Components/Assets/fruit.png";
 import questions from "./Components/Assets/conversation.png";
 import { Icon } from "@iconify/react";
+import grapes from "./Components/Assets/aboutUs_grapes.jpg";
+import figs from "./Components/Assets/aboutUs_fig.jpg";
+import box from "./Components/Assets/aboutU_woodBox.jpg";
+import apples from "./Components/Assets/aboutUs_appleBox.jpg";
+import papaya from "./Components/Assets/aboutUs_papaya.jpg";
+import kiwi from "./Components/Assets/aboutUs_kiwi.jpg";
 
 export const navData = [
   {
@@ -132,5 +138,30 @@ export const contactData = [
     title: "Contact",
     telephone: "+49 02544 8976530",
     email: "contact@freshfruit.de",
+  },
+];
+
+export const aboutUsImagesLeft = [
+  {
+    image1: grapes,
+    image2: figs,
+    image3: box,
+  },
+];
+
+export const aboutUsImagesRight = [
+  {
+    image1: kiwi,
+    image2: papaya,
+    image3: apples,
+  },
+];
+
+export const aboutUsText = [
+  {
+    title: "About us",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
   },
 ];

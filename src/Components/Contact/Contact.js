@@ -26,7 +26,7 @@ function Contact() {
               return (
                 <>
                   <div className={styles.contacts}>
-                    {data.icon}
+                    <a href="https://www.openstreetmap.org/#map=19/53.58842/9.97313" target={"blank"}>{data.icon}</a>
                     <h3>{data.title}</h3>
                     <span>
                       <p>{data.address}</p>
@@ -43,7 +43,7 @@ function Contact() {
                     <h3>{data.title}</h3>
                     <p>{data.address}</p>
                     <p>{data.telephone}</p>
-                    <p>{data.email}</p>
+                    <a href = "mailto: contact@freshfruit.de"><p>{data.email}</p></a>
                   </div>
                 </>
               );

@@ -46,7 +46,10 @@
   flex-direction: column;
   gap: 0.5rem;
   padding-top: 0;
-/* word-break: break-word; */
+}
+
+.contacts a {
+  text-decoration: underline;
 }
 
 .contacts span {
@@ -62,10 +65,7 @@
 }
 
 .contacts p {
-  font-family: "Source Serif Pro";
   font-size: 1rem;
-  color: #707070;
-  
 }
 
 .we_are_here {
@@ -81,8 +81,6 @@
 
 .we_are_here h2 {
   font-size: 1.5rem;
-  font-family: Raleway;
-  font-weight: thin;
 }
 
 /* ContactMap CSS */
