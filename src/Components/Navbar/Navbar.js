@@ -1,9 +1,10 @@
-import React from "react";
+// import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import Logo from "./../Assets/logo_FreshFruit_transparent_bg_small.png";
 import Dropdown from "./Dropdown";
 import { navData } from "../../data";
+// import NavbarPink from './NavbarPink'
 
 const Navbar = () => {
   return (
@@ -22,7 +23,7 @@ const Navbar = () => {
             {navData.map((data, index) => {
               return (
                 <li className={styles.navbar} key={index}>
-                  <NavLink to={data.link}>{data.name}</NavLink>
+                  <NavLink to={data.link}>{data.name} </NavLink>
                 </li>
               );
             })}
