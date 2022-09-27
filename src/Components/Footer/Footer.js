@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 import Logo from "../Assets/logo_FreshFruit_transparent_bg_small.png";
 import SocialMedia from "./SocialMedia";
 // import MenuDrop from "../Navbar/MenuDrop";
-import { fruitSeason, navData } from "../../data";
+import { navData } from "../../data";
+import FruitSeason from "./FruitSeason";
 
 function Footer() {
   const getCurrentYear = () => {
@@ -24,16 +25,7 @@ function Footer() {
         <hr id={styles.footer_hr} />
 
         <div className={styles.footer_content}>
-          {fruitSeason.map((data, index) => {
-            return (
-              <nav className={styles.fruit_season}>
-                <h3>{data.title}</h3>
-                <NavLink to={data.link} key={index}>
-                  {data.name}
-                </NavLink>
-              </nav>
-            );
-          })}
+          <FruitSeason />
         </div>
         <hr id={styles.footer_hr} />
         <div className={styles.footer_content}>
