@@ -1,0 +1,33 @@
+.fruit_catalogue_container {
+  background-color: #ffff;
+  height: 1000px;
+  padding-top: 12.813rem;
+}
+
+.fruit_catalogue_content {
+  display: flex;
+  height: 5.375rem;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #707070;
+  flex-wrap: wrap-reverse;
+}
+
+.fruit_catalogue_content a {
+  font-family: Raleway;
+  font-weight: thin;
+  color: #707070;
+}
+
+.fruit_catalogue_content a:hover {
+  background-color: #e5e5e5;
+  /* padding: 2.03rem; */
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  outline: 0px solid transparent;
+  overflow: hidden;
+}
+
+/* FruitCards.js CSS */
+
