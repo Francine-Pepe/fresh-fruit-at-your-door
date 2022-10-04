@@ -1,6 +1,6 @@
 .fruit_catalogue_container {
   background-color: #ffff;
-  height: 1000px;
+  height: auto;
   padding-top: 12.813rem;
 }
 
@@ -31,3 +31,52 @@
 
 /* FruitCards.js CSS */
 
+.fruit_cards_image {
+  width: 15rem;
+  height: 10.813rem;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+input {
+  width: 50%;
+  height: 2rem;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  text-align: center;
+}
+
+input:focus-visible {
+  color: #FF0000;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+  background-color: #707070;
+}
+
+.add_button,
+.remove_button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.add_button {
+  color: #39bf99;
+  border: 2px solid #39bf99;
+}
+
+.remove_button {
+  color: #FF0000;
+  border: 2px solid #FF0000;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+}
