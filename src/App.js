@@ -7,12 +7,15 @@ import HowItWorksFullPage from "./Components/HowItWorks/HowItWorksFullPage";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import Footer from "./Components/Footer/Footer";
+
 // import styles from "./App.module.css";
 
 function App(props) {
+  
   return (
     <>
       <BrowserRouter>
+     
         <Navbar />
         <Routes>
           <Route index path="/" element={<Home />} />
@@ -20,6 +23,7 @@ function App(props) {
           <Route path="/fruitcatalogue" element={<FruitCatalogue />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
+          {/* <Routes path="/season/:name" element={<FruitSeason />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

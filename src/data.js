@@ -38,23 +38,23 @@ export const navData = [
 export const fruitSeason = [
   {
     title: "Fruit Season",
-    link: "/fruitseason",
+    link: "/season/fruitseason",
   },
   {
     name: "Winter",
-    link: "/winter",
+    link: "/season/winter",
   },
   {
     name: "Spring",
-    link: "/spring",
+    link: "/season/spring",
   },
   {
     name: "Summer",
-    link: "/summer",
+    link: "/season/summer",
   },
   {
     name: "Autumn",
-    link: "/autumn",
+    link: "/season/autumn",
   },
 ];
 
