@@ -31,8 +31,8 @@ function Footer() {
         <div className={styles.footer_content}>
           {navData.map((data, index) => {
             return (
-              <nav>
-                <NavLink to={data.link} key={index}>
+              <nav key={index}>
+                <NavLink to={data.link} >
                   {data.name}
                 </NavLink>
               </nav>

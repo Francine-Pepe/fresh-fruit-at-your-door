@@ -8,15 +8,15 @@ import Home from "../Home/Home";
 import FruitCards from "./FruitCards";
 
 function FruitCatalogue(props) {
-  const BackgroundColor = () => {
-    const [backgroundColor, setbackgroundColor] = useState();
+  // const BackgroundColor = () => {
+  //   const [backgroundColor, setbackgroundColor] = useState();
 
-    if ((<Home />)) {
-      return <NavbarPink />;
-    } else {
-      return <Navbar />;
-    }
-  };
+  //   if ((<Home />)) {
+  //     return <NavbarPink />;
+  //   } else {
+  //     return <Navbar />;
+  //   }
+  // };
 
   return (
     <>

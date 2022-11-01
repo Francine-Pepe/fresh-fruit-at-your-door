@@ -21,7 +21,7 @@ const NavbarPink = (props) => {
           <ul>
             {navData.map((data, index) => {
               return (
-                <li className={styles.navbar} key={index}>
+                <li className={styles.nav_pink} key={index}>
                   <NavLink  to={data.link}>{data.name}</NavLink>
                 </li>
               );

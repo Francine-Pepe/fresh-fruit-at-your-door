@@ -4,8 +4,9 @@ import Logo from "./../Assets/logo_FreshFruit_transparent_bg_small.png";
 import Dropdown from "./Dropdown";
 import { navData } from "../../data";
 import NavbarPink from "./NavbarPink";
+import Home from "../Home/Home";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <>
       <div className={styles.navbar_container}>

@@ -27,14 +27,14 @@
   margin: 0;
 }
 
-nav a {
+.nav .navbar a {
   text-decoration: none;
-  color: #f23d91;
+  color: #F23D91;
   /* change the color to white  */
   font-family: "Raleway Black";
 }
 
-.nav_pink a {
+.nav_pink .nav_pink a {
   text-decoration: none;
   color: #F23D91;
   font-family: "Raleway Black";
