@@ -1,0 +1,33 @@
+/* CartButton CSS */
+
+.cart_button_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cart_button button {
+  width: 5rem;
+  height: auto;
+  padding: 0.5rem 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart_button_delete:hover,
+.cart_button_buy:hover {
+  /* filter: brightness(0) invert(1); */
+  fill: #fff;
+}
+
+.cart_button_container  button:hover {
+  background-color: rgba(0, 0, 0, 0.23);
+}
+
+
