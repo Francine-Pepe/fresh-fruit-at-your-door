@@ -45,11 +45,9 @@
   padding: 0 5rem;
 }
 
-.how_it_works_preview h2 {
+.how_it_works_preview h1 {
   font-size: 2rem;
 }
-
-
 
 /* Media Queries */
 
@@ -101,6 +99,5 @@
   .how_it_works_preview_text p {
     padding: 0 2rem;
     font-size: 0.813rem;
-
   }
 }

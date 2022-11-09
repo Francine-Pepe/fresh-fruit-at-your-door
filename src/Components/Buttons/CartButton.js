@@ -1,17 +1,15 @@
 import React from "react";
 import styles from "./Buttons.module.css";
-import { buttonCart } from "../../data";
+import BuyButton from "./BuyButton";
+import DeleteButton from "./DeleteButton";
 
-export default function CartButton() {
+export default function CartButton(props) {
   return (
-    <div className={styles.cart_button_container}>
-      {buttonCart.map((data, index) => {
-        return (
-          <div className={styles.cart_button}>
-            <button key={index}>{data.icon}</button>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div className={styles.cart_button_container}>
+        <BuyButton />
+        <DeleteButton />
+      </div>
+    </>
   );
 }

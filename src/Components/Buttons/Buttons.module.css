@@ -4,12 +4,12 @@
   width: 100%;
   height: auto;
   display: flex;
-  flex-direction: row;
   gap: 1rem;
   justify-content: center;
 }
 
-.cart_button button {
+.button_buy,
+.button_delete {
   width: 5rem;
   height: auto;
   padding: 0.5rem 0;
@@ -22,12 +22,13 @@
 
 .cart_button_delete:hover,
 .cart_button_buy:hover {
-  /* filter: brightness(0) invert(1); */
-  fill: #fff;
+  filter: brightness(0) invert(1);
 }
 
-.cart_button_container  button:hover {
-  background-color: rgba(0, 0, 0, 0.23);
+.button_buy:hover {
+  background-color: #39bf99;
 }
 
-
+.button_delete:hover {
+  background-color: #ff0118;
+}

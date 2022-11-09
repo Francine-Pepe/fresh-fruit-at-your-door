@@ -1,10 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import Logo from "./../Assets/logo_FreshFruit_transparent_bg_small.png";
 import Dropdown from "./Dropdown";
 import { navData } from "../../data";
-import NavbarPink from "./NavbarPink";
-import Home from "../Home/Home";
 
 const Navbar = (props) => {
   return (

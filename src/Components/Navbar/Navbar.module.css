@@ -13,7 +13,6 @@
 .nav > div {
   display: flex;
   width: 50%;
-  
 }
 
 .nav ul {
@@ -29,14 +28,14 @@
 
 .nav .navbar a {
   text-decoration: none;
-  color: #F23D91;
+  color: #f23d91;
   /* change the color to white  */
   font-family: "Raleway Black";
 }
 
 .nav_pink .nav_pink a {
   text-decoration: none;
-  color: #F23D91;
+  color: #f23d91;
   font-family: "Raleway Black";
 }
 
@@ -46,7 +45,7 @@
   justify-content: flex-start;
 }
 
-.navbar.colorChange{
+.navbar.colorChange {
   color: #000;
 }
 
@@ -68,6 +67,10 @@
   background-color: transparent;
 }
 
+.nav_home  {
+  color: #ffffff;
+}
+
 /* Media Queries */
 
 @media only screen and (min-width: 954px) {
@@ -86,6 +89,5 @@
     align-items: center;
     justify-content: space-around;
     width: 100%;
-
   }
 }

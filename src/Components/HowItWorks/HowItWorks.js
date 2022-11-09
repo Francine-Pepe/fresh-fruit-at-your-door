@@ -13,7 +13,7 @@ function HowItWorks() {
             {howItWorksText.map((data, index) => {
               return (
                 <>
-                  <h2 key={index}>{data.title}</h2>
+                  <h1 key={index}>{data.title}</h1>
                   <hr id={styles.preview_hr} />
                   <div className={styles.how_it_works_preview_text}>
                     <p>{data.text}</p>

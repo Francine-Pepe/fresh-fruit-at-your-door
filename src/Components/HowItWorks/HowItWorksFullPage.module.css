@@ -119,3 +119,31 @@
     z-index: 0;
   }
 }
+
+@media screen and (max-width: 638px) {
+  .how_it_works_full_page_left_content {
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 523px) {
+  .how_it_works_full_page_left_content {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 463px) {
+  .how_it_works_full_page_left_content {
+    height: 25rem;
+  }
+
+  .full_page_text_title h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 422px) {
+  .how_it_works_full_page_left_content {
+    height: 30rem;
+  }
+}

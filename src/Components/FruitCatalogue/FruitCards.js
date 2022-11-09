@@ -43,9 +43,10 @@ function FruitCards() {
                     borderRadius="5px"
                     margin="1rem"
                     key={index}
+                    
                   >
                     <Flex>
-                      <Box padding="4" color="black" w="100%">
+                      <Box padding="4" color="black" w="100%" >
                         <Flex
                           alignItems="center"
                           sx={{
@@ -66,6 +67,7 @@ function FruitCards() {
                             flexDirection="column"
                             p="2rem"
                             gap="0.5rem"
+                            
                             sx={{
                               "@media screen and (max-width: 1023px)": {
                                 padding: "0.5rem",
