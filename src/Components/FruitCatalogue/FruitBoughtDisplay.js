@@ -14,7 +14,32 @@ import {
 import React from "react";
 import CartButton from "../Buttons/CartButton";
 
-function FruitBoughtDisplay() {
+function FruitBoughtDisplay(props) {
+  const products = [
+    {
+      fruit: "Banana",
+      price: "€2.00 / kg",
+      quantity: "2 kg",
+      total: "€4",
+    },
+    {
+      fruit: "Ananas",
+      price: "€2.00 / Unit",
+      quantity: "1",
+      total: "€2",
+    },
+    {
+      fruit: "Strawberry",
+      price: "€3.00 / Kg",
+      quantity: "2",
+      total: "€6",
+    },
+  ];
+
+  const onDelete = (data) => {
+    props.onDelete(props.data);
+  };
+
   return (
     <>
       <Container
@@ -28,7 +53,7 @@ function FruitBoughtDisplay() {
       >
         <Box padding="4" color="black" w="100%" textAlign="center">
           <h1>Your cart</h1>
-          <TableContainer>
+          <TableContainer id="mySelect">
             <Table size="sm" padding="4">
               <Thead>
                 <Tr>
@@ -39,36 +64,18 @@ function FruitBoughtDisplay() {
                 </Tr>
               </Thead>
               <Tbody>
-                <Tr>
-                  <Checkbox>
-                    <Td padding="2" w="10rem">
-                      Banana
-                    </Td>
-                  </Checkbox>
-                  <Td>€2.00 / kg</Td>
-                  <Td>2 kg</Td>
-                  <Th isNumeric>€4.00</Th>
-                </Tr>
-                <Tr>
-                  <Checkbox>
-                    <Td padding="2" w="10rem">
-                      Ananas
-                    </Td>
-                  </Checkbox>
-                  <Td>€2.00 / Unit</Td>
-                  <Td>1</Td>
-                  <Th isNumeric>€2.00</Th>
-                </Tr>
-                <Tr>
-                  <Checkbox>
-                    <Td padding="2" w="10rem">
-                      Strawberry
-                    </Td>
-                  </Checkbox>
-                  <Td>€3.00 / Kg</Td>
-                  <Td>2</Td>
-                  <Th isNumeric>€6.00</Th>
-                </Tr>
+                {products.map((data, index) => (
+                  <Tr>
+                    <Checkbox>
+                      <Td padding="2" w="10rem">
+                        {data.fruit}
+                      </Td>
+                    </Checkbox>
+                    <Td>{data.price}</Td>
+                    <Td>{data.quantity}</Td>
+                    <Th isNumeric>{data.total}</Th>
+                  </Tr>
+                ))}
               </Tbody>
               <Tfoot>
                 <Tr>
@@ -80,7 +87,7 @@ function FruitBoughtDisplay() {
               </Tfoot>
             </Table>
           </TableContainer>
-          <CartButton />
+          <CartButton onDelete={onDelete} />
         </Box>
       </Container>
     </>

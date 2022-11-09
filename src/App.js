@@ -8,15 +8,12 @@ import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import Footer from "./Components/Footer/Footer";
 
-// import styles from "./App.module.css";
-
 function App(props) {
-  
   return (
     <>
       <BrowserRouter>
-     
         <Navbar />
+
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route path="/howitworks" element={<HowItWorksFullPage />} />

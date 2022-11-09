@@ -167,7 +167,7 @@ export const aboutUsText = [
   },
 ];
 
-export const buttonCart = [
+export const buttonBuy = [
   {
     icon: (
       <Icon
@@ -179,6 +179,9 @@ export const buttonCart = [
       />
     ),
   },
+];
+
+export const buttonDelete = [
   {
     icon: (
       <Icon
@@ -191,4 +194,3 @@ export const buttonCart = [
     ),
   },
 ];
-
