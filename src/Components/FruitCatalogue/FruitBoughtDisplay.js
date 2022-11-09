@@ -36,10 +36,6 @@ function FruitBoughtDisplay(props) {
     },
   ];
 
-  const onDelete = (data) => {
-    props.onDelete(props.data);
-  };
-
   return (
     <>
       <Container
@@ -87,8 +83,8 @@ function FruitBoughtDisplay(props) {
               </Tfoot>
             </Table>
           </TableContainer>
-          <CartButton onDelete={onDelete} />
         </Box>
+        <CartButton />
       </Container>
     </>
   );

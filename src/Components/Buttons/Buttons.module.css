@@ -6,6 +6,7 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
+  margin: 2rem;
 }
 
 .button_buy,
@@ -31,4 +32,22 @@
 
 .button_delete:hover {
   background-color: #ff0118;
+}
+
+/* Load more button */
+
+.load_more_button {
+  width: 50%;
+  height: auto;
+  padding: 0.5rem 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+  color: #39bf99;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.load_more_button:hover {
+  background-color: #f3f3f3;
+  font-weight: bold;
 }
