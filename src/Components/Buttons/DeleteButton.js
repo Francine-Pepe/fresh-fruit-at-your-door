@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Buttons.module.css";
 import { buttonDelete } from "../../data";
-import { useState } from "react";
 
 function DeleteButton(props) {
   return (
