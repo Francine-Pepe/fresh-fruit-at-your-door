@@ -1,17 +1,13 @@
-import { useState } from "react";
 import styles from "./FruitCatalogue.module.css";
 import { Container, Box, Flex, Tag, TagLabel } from "@chakra-ui/react";
-import useFetch from "react-fetch-hook";
 import FruitCatalogueInput from "./FruitCatalogueInput";
 import Loading from "../Loading/Loading";
 import LoadMoreButton from "../Buttons/LoadMoreButton";
+import { useEffect, useState } from "react";
 
 function FruitCards(props) {
-  const { isLoading, data, error } = useFetch(
-    "https://fruits-api-project.herokuapp.com/fruits"
-  );
-
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Load more button function:
   const [visible, setVisible] = useState(3);
@@ -19,6 +15,23 @@ function FruitCards(props) {
   const showMoreItems = () => {
     setVisible((prevValue) => prevValue + 3);
   };
+
+  const [category, setCategory] = useState();
+
+  useEffect(() => {
+    console.log("The Component is Ready!");
+
+    fetch("https://fruits-api-project.herokuapp.com/fruits")
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
+  console.log(data);
 
   return (
     <>

@@ -1,0 +1,12 @@
+
+.fruit_season {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fruit_season a {
+    border: 1px solid transparent;
+    padding: 1.85rem;
+  }
+  

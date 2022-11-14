@@ -3,6 +3,7 @@ import styles from "./HowItWorks.module.css";
 import { howItWorksText } from "../../data";
 import { Button } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
+import ContinueReadingButton from "../Buttons/ContinueReadingButton";
 
 function HowItWorks() {
   return (
@@ -18,15 +19,8 @@ function HowItWorks() {
                   <div className={styles.how_it_works_preview_text}>
                     <p>{data.text}</p>
                   </div>
-                  <NavLink to={data.link} target="blank">
-                    <Button
-                      color="#707070"
-                      variant="outline"
-                      boxShadow="rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
-                      fontFamily={"Raleway Thin"}
-                    >
-                      {data.button}
-                    </Button>
+                  <NavLink to={data.link}>
+                    <ContinueReadingButton />
                   </NavLink>
                 </>
               );

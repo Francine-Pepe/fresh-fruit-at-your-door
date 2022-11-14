@@ -1,7 +1,7 @@
 .circle_loading {
   fill: transparent;
   stroke: #dd2476;
-  stroke-width: 7px;
+  stroke-width: 9px;
   stroke-linecap: round;
   filter: url(#shadow);
 }
@@ -14,8 +14,8 @@
   }
   
   #container {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
   }
   
   @keyframes animation {

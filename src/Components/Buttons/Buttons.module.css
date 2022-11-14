@@ -36,18 +36,92 @@
 
 /* Load more button */
 
-.load_more_button {
-  width: 50%;
+.load_more_button,
+.how_it_works_preview {
+  width: 15rem;
   height: auto;
-  padding: 0.5rem 0;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 5px;
-  color: #39bf99;
+  color: #707070;
   text-transform: uppercase;
-  font-weight: 400;
+  background: linear-gradient(
+    to right,
+    var(--chakra-colors-gray-100) 50%,
+    white 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
 }
 
-.load_more_button:hover {
-  background-color: #f3f3f3;
-  font-weight: bold;
+.how_it_works_preview {
+  padding: 1rem 0;
+}
+
+.load_more_button:hover,
+.how_it_works_preview:hover {
+  /* font-weight: bold; */
+  background-position: left bottom;
+}
+
+.stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1rem 0;
+  margin: 0 -5%;
+  overflow: hidden;
+  gap: 2rem;
+}
+
+.dot_flashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #f23d91;
+  color: #f23d91;
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+
+.dot_flashing::before,
+.dot_flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot_flashing::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #f23d91;
+  color: #f23d91;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot_flashing::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #f23d91;
+  color: #f23d91;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #f23d91;
+  }
+  50%,
+  100% {
+    background-color: #f1b7d2;
+  }
 }

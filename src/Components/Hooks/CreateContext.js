@@ -5,10 +5,13 @@ export const OrderContext = createContext({});
 const OrderContextProvider = ({ children }) => {
   const [season, setSeason] = useState();
 
-  const setSimpleVals = (key, val) => {
+  const category = (options) => {
     setSeason({
       ...season,
-      [key]: val,
+      link: {
+        ...season.link,
+        ...options,
+      },
     });
   };
 
@@ -16,7 +19,7 @@ const OrderContextProvider = ({ children }) => {
     <OrderContext.Provider
       value={{
         season,
-        setSimpleVals,
+        category,
       }}
     >
       {children}

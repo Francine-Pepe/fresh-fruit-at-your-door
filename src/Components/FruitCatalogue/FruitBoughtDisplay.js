@@ -11,8 +11,8 @@ import {
   Tfoot,
   Checkbox,
 } from "@chakra-ui/react";
-import React from "react";
 import CartButton from "../Buttons/CartButton";
+import React, { useState } from "react";
 
 function FruitBoughtDisplay(props) {
   const products = [
@@ -49,6 +49,7 @@ function FruitBoughtDisplay(props) {
       >
         <Box padding="4" color="black" w="100%" textAlign="center">
           <h1>Your cart</h1>
+
           <TableContainer id="mySelect">
             <Table size="sm" padding="4">
               <Thead>

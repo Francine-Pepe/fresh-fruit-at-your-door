@@ -1,21 +1,17 @@
-// import FruitSeason from "../Footer/FruitSeason";
+import FruitSeason from "../FruitSeason/FruitSeason";
 import styles from "./FruitCatalogue.module.css";
 import { Icon } from "@iconify/react";
-// import NavbarPink from "../Navbar/NavbarPink";
-// import Navbar from "../Navbar/Navbar";
 import React, { useState } from "react";
-// import Home from "../Home/Home";
 import FruitCards from "./FruitCards";
 import FruitBoughtDisplay from "./FruitBoughtDisplay";
-// import Filter from "../Filter/Filter";
+import Filter from "../Filter/Filter";
 
 function FruitCatalogue(props) {
-  
   return (
     <>
       <div className={styles.fruit_catalogue_container}>
         <div className={styles.fruit_catalogue_content}>
-          {/* <FruitSeason /> */}
+          <FruitSeason />
           {/* <Filter /> */}
           <Icon icon="bytesize:search" color="#707070" width="33" height="33" />
           <Icon
