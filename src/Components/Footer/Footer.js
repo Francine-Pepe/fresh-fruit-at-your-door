@@ -5,7 +5,7 @@ import Logo from "../Assets/logo_FreshFruit_transparent_bg_small.png";
 import SocialMedia from "./SocialMedia";
 // import MenuDrop from "../Navbar/MenuDrop";
 import { navData } from "../../data";
-import FruitSeason from "./FruitSeason";
+import FruitSeason from "../FruitSeason/FruitSeason";
 
 function Footer() {
   const getCurrentYear = () => {
