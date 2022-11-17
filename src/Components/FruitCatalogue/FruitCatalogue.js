@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 import FruitCards from "./FruitCards";
 import FruitBoughtDisplay from "./FruitBoughtDisplay";
-import Filter from "../Filter/Filter";
+
 
 function FruitCatalogue(props) {
   return (
@@ -26,7 +26,7 @@ function FruitCatalogue(props) {
             <FruitCards />
           </div>
           <div className={styles.fruit_bought_display}>
-            <FruitBoughtDisplay />
+            {/* <FruitBoughtDisplay /> */}
           </div>
         </div>
       </div>

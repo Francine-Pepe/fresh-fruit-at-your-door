@@ -23,8 +23,8 @@ export const navData = [
     link: "/howitworks",
   },
   {
-    name: "Fruit Catalogue",
-    link: "/fruitcatalogue",
+    name: "Products",
+    link: "/products",
   },
   {
     name: "About us",
@@ -198,3 +198,26 @@ export const buttonDelete = [
     ),
   },
 ];
+
+export const data = {
+  products: [
+    {
+      id: "1",
+      name: "Apple",
+      price: "1.99",
+      image: apples,
+    },
+    {
+      id: "2",
+      name: "Papaya",
+      price: "5.99",
+      image: papaya,
+    },
+    {
+      id: "3",
+      name: "Kiwi",
+      price: "3.99",
+      image: kiwi,
+    },
+  ],
+};

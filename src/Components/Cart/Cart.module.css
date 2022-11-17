@@ -1,0 +1,27 @@
+.cart_header {
+  width: 50vw;
+  text-align: center;
+  display: flex;
+}
+
+.cart_container {
+  width: 50vw;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  background-color: #cccccc;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+}
+
+/* Cart.js  */
+
+.basket_container,
+.main_products {
+  display: block;
+  background-color: #cccccc;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+}

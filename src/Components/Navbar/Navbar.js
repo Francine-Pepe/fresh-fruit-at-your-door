@@ -1,10 +1,15 @@
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import Logo from "./../Assets/logo_FreshFruit_transparent_bg_small.png";
 import Dropdown from "./Dropdown";
 import { navData } from "../../data";
 
 const Navbar = (props) => {
+  // const navWhite = (nav) => {
+  //   const nav = "/" ? #ffffff : "#f23d91";
+
+  // }
+
   return (
     <>
       <div className={styles.navbar_container}>
@@ -20,9 +25,11 @@ const Navbar = (props) => {
           <ul>
             {navData.map((data, index) => {
               return (
-                <li className={styles.navbar} key={index}>
-                  <NavLink to={data.link}>{data.name}</NavLink>
-                </li>
+                <>
+                  <li className={styles.navbar}>
+                    <NavLink to={data.link}>{data.name}</NavLink>
+                  </li>
+                </>
               );
             })}
           </ul>
