@@ -6,6 +6,8 @@ import LoadMoreButton from "../Buttons/LoadMoreButton";
 import { useEffect, useState } from "react";
 
 function FruitCards(props) {
+  const { product, onAdd } = props;
+
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -122,7 +124,14 @@ function FruitCards(props) {
                               </Flex>
                             </Flex>
 
-                            <FruitCatalogueInput />
+                            {/* <FruitCatalogueInput /> */}
+
+                            <button
+                              className="product-button"
+                              onClick={() => onAdd(product)}
+                            >
+                              Add to cart
+                            </button>
                           </Flex>
                         </Box>
                       </Flex>

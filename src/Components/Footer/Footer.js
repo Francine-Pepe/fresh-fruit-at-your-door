@@ -7,7 +7,8 @@ import SocialMedia from "./SocialMedia";
 import { navData } from "../../data";
 import FruitSeason from "../FruitSeason/FruitSeason";
 
-function Footer() {
+function Footer(props) {
+
   const getCurrentYear = () => {
     return new Date().getFullYear();
   };
@@ -25,7 +26,7 @@ function Footer() {
         <hr id={styles.footer_hr} />
 
         <div className={styles.footer_content}>
-          <FruitSeason />
+          <FruitSeason  />
         </div>
         <hr id={styles.footer_hr} />
         <div className={styles.footer_content}>

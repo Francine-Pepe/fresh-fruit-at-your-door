@@ -1,6 +1,7 @@
 import React from "react";
 import { Flex } from "@chakra-ui/react";
 import styles from "./Buttons.module.css";
+import { useState } from "react";
 
 function LoadMoreButton(props) {
   const { onClick } = props;
