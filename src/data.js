@@ -4,7 +4,6 @@ import wallet from "./Components/Assets/wallet.png";
 import delivery from "./Components/Assets/delivery-truck.png";
 import fruit from "./Components/Assets/fruit.png";
 import questions from "./Components/Assets/conversation.png";
-import { Icon } from "@iconify/react";
 import grapes from "./Components/Assets/aboutUs_grapes.jpg";
 import figs from "./Components/Assets/aboutUs_fig.jpg";
 import box from "./Components/Assets/aboutU_woodBox.jpg";
@@ -12,6 +11,10 @@ import apples from "./Components/Assets/aboutUs_appleBox.jpg";
 import papaya from "./Components/Assets/aboutUs_papaya.jpg";
 import kiwi from "./Components/Assets/aboutUs_kiwi.jpg";
 import styles from "./Components/Buttons/Buttons.module.css";
+import ShoppingCart from "./Components/Icons/ShoppingCart";
+import ReturnIcon from "./Components/Icons/ReturnIcon";
+import ContactIcon from "./Components/Icons/ContactIcon";
+import MapIcon from "./Components/Icons/MapIcon";
 
 export const navData = [
   {
@@ -117,14 +120,7 @@ export const howItWorksText = [
 
 export const addressData = [
   {
-    icon: (
-      <Icon
-        icon="clarity:map-marker-line"
-        color="#707070"
-        width="60"
-        height="59"
-      />
-    ),
+    icon: <MapIcon />,
     title: "Address",
     address: "Martinstraße, 78 \n 22333 - Berlin - Germany",
   },
@@ -132,14 +128,7 @@ export const addressData = [
 
 export const contactData = [
   {
-    icon: (
-      <Icon
-        icon="fluent:phone-laptop-24-regular"
-        color="#707070"
-        width="64"
-        height="59"
-      />
-    ),
+    icon: <ContactIcon />,
     title: "Contact",
     telephone: "+49 02544 8976530",
     email: "contact@freshfruit.de",
@@ -171,53 +160,16 @@ export const aboutUsText = [
   },
 ];
 
-export const buttonBuy = [
+export const CartButtons = [
   {
-    icon: (
-      <Icon
-        icon="carbon:shopping-cart"
-        color="#39bf99"
-        width="24"
-        height="24"
-        className={styles.cart_button_buy}
-      />
-    ),
+    name: "Go to cart",
+    link: "/cart",
+    icon: <ShoppingCart />,
+  },
+  {
+    name: "Buy more",
+    link: "/products",
+    icon: <ReturnIcon />,
   },
 ];
 
-export const buttonDelete = [
-  {
-    icon: (
-      <Icon
-        icon="fluent:delete-28-regular"
-        color="#FF0118"
-        width="24"
-        height="24"
-        className={styles.cart_button_delete}
-      />
-    ),
-  },
-];
-
-export const data = {
-  products: [
-    {
-      id: "1",
-      name: "Apple",
-      price: "1.99",
-      image: apples,
-    },
-    {
-      id: "2",
-      name: "Papaya",
-      price: "5.99",
-      image: papaya,
-    },
-    {
-      id: "3",
-      name: "Kiwi",
-      price: "3.99",
-      image: kiwi,
-    },
-  ],
-};
