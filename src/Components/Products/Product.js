@@ -4,12 +4,19 @@ import { Container, Flex, Button } from "@chakra-ui/react";
 import styles from "./Products.module.css";
 import { NavLink } from "react-router-dom";
 import Loading from "../Loading/Loading";
+import { useSelector, useDispatch } from "react-redux";
+import { addCart } from "../Redux/Action"
 
 function Product() {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  const dispatch = useDispatch();
+  const addProduct = (product) => {
+    dispatch(addCart(product));
+  }
 
 
   useEffect(() => {
@@ -52,7 +59,7 @@ function Product() {
               <h2>{product.category}</h2>
               <h2>€ {product.price}</h2>
               <Flex gap="2rem">
-                <Button>Add to cart</Button>
+                <Button onClick={() => addProduct(product)}>Add to cart</Button>
                 <Button>
                   <NavLink to={"/cart"}>Go to cart</NavLink>
                 </Button>
