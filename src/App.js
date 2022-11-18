@@ -9,6 +9,7 @@ import Home from "./Components/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import Products from "./Components/Products/Products";
 import Product from "./Components/Products/Product";
+import Cart from "./Components/Cart/Cart";
 
 function App(props) {
   return (
@@ -22,6 +23,7 @@ function App(props) {
           {/* <Route path="/fruitcatalogue" element={<FruitCatalogue />} /> */}
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
 

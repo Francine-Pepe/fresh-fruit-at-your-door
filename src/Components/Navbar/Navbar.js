@@ -3,12 +3,10 @@ import styles from "./Navbar.module.css";
 import Logo from "./../Assets/logo_FreshFruit_transparent_bg_small.png";
 import Dropdown from "./Dropdown";
 import { navData } from "../../data";
+import { useSelector } from "react-redux";
+import CartBtn from "../Cart/CartBtn";
 
 const Navbar = (props) => {
-  // const navWhite = (nav) => {
-  //   const nav = "/" ? #ffffff : "#f23d91";
-
-  // }
 
   return (
     <>
@@ -34,6 +32,7 @@ const Navbar = (props) => {
             })}
           </ul>
         </nav>
+        <CartBtn />
       </div>
     </>
   );
