@@ -10,6 +10,7 @@ import Footer from "./Components/Footer/Footer";
 import Products from "./Components/Products/Products";
 import Product from "./Components/Products/Product";
 import Cart from "./Components/Cart/Cart";
+import ProductModal from "./Components/Products/ProductModal"
 
 function App(props) {
   return (

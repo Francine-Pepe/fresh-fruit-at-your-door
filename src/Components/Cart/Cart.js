@@ -1,3 +1,4 @@
+import { Box, Container, Flex } from "@chakra-ui/react";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
@@ -16,51 +17,57 @@ const Cart = () => {
 
   const emptyCart = () => {
     return (
-      <div className="px-4 my-5 bg-light rounded-3 py-5">
-        <div className="container py-4">
-          <div className="row">
+      <Container pt="10rem" pb="10rem" maxW="container.md" h="auto">
+        <Flex flexDirection="column">
+          <Box>
             <h3>Your Cart is Empty</h3>
-          </div>
-        </div>
-      </div>
+          </Box>
+        </Flex>
+      </Container>
     );
   };
   const cartItems = (product) => {
     return (
       <>
-        <div className="px-4 my-5 bg-light rounded-3 py-5">
-          <div className="container py-4">
-            <div className="row justify-content-center">
-              <div className="col-md-4">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  height="200px"
-                  width="180px"
-                />
-              </div>
-              <div className="col-md-4">
-                <h3>{product.name}</h3>
-                <p className="lead fw-bold">
-                  {product.qty} X ${product.price} = $
-                  {product.qty * product.price}
-                </p>
-                <button
-                  className="btn btn-outline-dark me-4"
-                  onClick={() => handleDel(product)}
-                >
-                  -
-                </button>
-                <button
-                  className="btn btn-outline-dark"
-                  onClick={() => handleAdd(product)}
-                >
-                  +
-                </button>
-              </div>
+        <Container
+          maxW="container.md"
+          // w="100vw"
+          bg="#ffff"
+          centerContent
+          boxShadow="0 0 2px 2px #cccc"
+          borderRadius="5px"
+          mt="3.5rem"
+        >
+          <Flex flexDirection="column">
+            <Box>
+              <img
+                src={product.image}
+                alt={product.name}
+                height="200px"
+                width="180px"
+              />
+            </Box>
+            <div className="col-md-4">
+              <h3>{product.name}</h3>
+              <p className="lead fw-bold">
+                {product.qty} X ${product.price} = €
+                {product.qty * product.price}
+              </p>
+              <button
+                className="btn btn-outline-dark me-4"
+                onClick={() => handleDel(product)}
+              >
+                -
+              </button>
+              <button
+                className="btn btn-outline-dark"
+                onClick={() => handleAdd(product)}
+              >
+                +
+              </button>
             </div>
-          </div>
-        </div>
+          </Flex>
+        </Container>
       </>
     );
   };

@@ -1,15 +1,26 @@
 import React from "react";
 import styles from "./Buttons.module.css";
-import { buttonBuy } from "../../data";
+import { Button } from "@chakra-ui/react";
+import BasketIcon from "../Icons/BasketIcon";
+import { NavLink } from "react-router-dom";
 
-function BuyButton() {
+function BuyButton(props) {
+  const { id } = props;
   return (
     <>
-      <div className={styles.button_buy}>
-        {buttonBuy.map((data, index) => {
-          return <button key={index}>{data.icon}</button>;
-        })}
-      </div>
+      <Button
+        size="md"
+        w="20rem"
+        leftIcon={<BasketIcon />}
+        maxW="container.md"
+        // w="100vw"
+        bg="#ffff"
+        centerContent
+        boxShadow="0 0 2px 2px #707070"
+        borderRadius="5px"
+      >
+        <NavLink to={`/products/${id}`}>Buy now</NavLink>
+      </Button>
     </>
   );
 }

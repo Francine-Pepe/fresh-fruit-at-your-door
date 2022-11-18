@@ -2,14 +2,15 @@ import styles from "./Cart.module.css";
 import { useSelector } from "react-redux";
 import { Icon } from "@iconify/react";
 import { NavLink } from "react-router-dom";
-
 import React from "react";
+import { Flex } from "@chakra-ui/react";
 
 const CartBtn = () => {
-  const state = useSelector((state) => state.addItem);
+  const state = useSelector((state) => state.handleCart);
+
   return (
     <>
-      <div>
+      <Flex>
         <NavLink to={"/cart"}>
           <Icon
             icon="clarity:shopping-cart-line"
@@ -17,12 +18,12 @@ const CartBtn = () => {
             width="33"
             height="33"
           />
-          Cart 
-          {/* ({state.length}) */}
         </NavLink>
-      </div>
+        <span className={styles.cart_btn}>|</span>
+        {state.length}
+      </Flex>
     </>
   );
-}
+};
 
 export default CartBtn;

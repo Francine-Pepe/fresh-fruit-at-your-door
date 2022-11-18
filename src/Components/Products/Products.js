@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import Loading from "../Loading/Loading";
 import styles from "./Products.module.css";
 import { NavLink } from "react-router-dom";
-import LoadMoreButton from "../Buttons/LoadMoreButton";
-import Skeleton from "react-loading-skeleton";
+import Cart from "../Cart/Cart";
+import BasketIcon from "../Icons/BasketIcon";
 
 function Products(props) {
   const [data, setData] = useState([]);
@@ -39,25 +39,6 @@ function Products(props) {
     setVisible((prevValue) => prevValue + 3);
   };
 
-  const Loading = () => {
-    return (
-      <>
-        <div>
-          <Skeleton height={"350px"} />
-        </div>
-        <div>
-          <Skeleton height={"350px"} />
-        </div>
-        <div>
-          <Skeleton height={"350px"} />
-        </div>
-        <div>
-          <Skeleton height={"350px"} />
-        </div>
-      </>
-    );
-  };
-
   const filterProduct = (cat) => {
     const updatedList = data.filter((x) => x.category === cat);
     setFilter(updatedList);
@@ -87,6 +68,7 @@ function Products(props) {
             name,
             category,
             price,
+            unit,
             origin,
             badget,
             color,
@@ -96,7 +78,6 @@ function Products(props) {
               <>
                 <Container
                   maxW="container.md"
-                  // w="100vw"
                   bg="#ffff"
                   centerContent
                   boxShadow="0 0 2px 2px #cccc"
@@ -128,7 +109,7 @@ function Products(props) {
                           gap="0.5rem"
                           sx={{
                             "@media screen and (max-width: 1023px)": {
-                              padding: "0.5rem",
+                              padding: "1.5rem",
                               alignItems: "flex-start",
                             },
                             "@media screen and (max-width: 600px)": {
@@ -137,31 +118,41 @@ function Products(props) {
                             },
                           }}
                         >
-                          <strong>
-                            <h1>{name}</h1>
-                          </strong>
-                          <h2>Season: {category}</h2>
-                          <h2>Price: {price}</h2>
-                          <h2>Origin: {origin}</h2>
+                          <div className={styles.product_information}>
+                            <strong>
+                              <h1>{name}</h1>
+                            </strong>
 
-                          <Flex gap="0.5rem" flexWrap="wrap">
-                            {badget.map((badget, color, id) => {
-                              return (
-                                <Tag
-                                  size="md"
-                                  borderRadius="full"
-                                  w="fit-content"
-                                  key={id}
-                                  backgroundColor={badget.color}
-                                  color="#ffff"
-                                >
-                                  <TagLabel>{badget.name}</TagLabel>
-                                </Tag>
-                              );
-                            })}
-                          </Flex>
-                          <NavLink to={`/products/${id}`}>Buy now</NavLink>
+                            <h2>Season: {category}</h2>
+                            <h2>
+                              Price: € {price} / {unit}
+                            </h2>
+                            <h2>Origin: {origin}</h2>
+
+                            <Flex gap="0.5rem" flexWrap="wrap">
+                              {badget.map((badget, color, id) => {
+                                return (
+                                  <Tag
+                                    size="md"
+                                    borderRadius="full"
+                                    w="fit-content"
+                                    key={id}
+                                    backgroundColor={badget.color}
+                                    color="#ffff"
+                                    p="0.5rem"
+                                  >
+                                    <TagLabel>{badget.name}</TagLabel>
+                                  </Tag>
+                                );
+                              })}
+                            </Flex>
+                          </div>
                         </Flex>
+
+                        <button className={styles.buy_now_button}>
+                          <BasketIcon />
+                          <NavLink to={`/products/${id}`}>Buy now</NavLink>
+                        </button>
                       </Flex>
                     </Box>
                   </Flex>
@@ -178,10 +169,15 @@ function Products(props) {
     <Container maxW="fullWidth" centerContent pt="10rem">
       <h1>Fruit Catalogue</h1>
 
-      <Flex>
-        <Box w="100vw">{loading ? <Loading /> : <ShowProducts />}</Box>
+      <Flex w="100vw">
+        <Box w="70vw" m="2rem">
+          {loading ? <Loading /> : <ShowProducts />}
+        </Box>
+        <Box w="30vw" m="2rem">
+          <Cart />
+        </Box>
       </Flex>
-      <LoadMoreButton onClick={showMoreItems} />
+      {/* <LoadMoreButton onClick={showMoreItems} /> */}
     </Container>
   );
 }
