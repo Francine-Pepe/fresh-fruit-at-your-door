@@ -163,7 +163,7 @@ export const aboutUsText = [
 export const CartButtons = [
   {
     name: "Go to cart",
-    link: "/cart",
+    link: "/cartpage",
     icon: <ShoppingCart />,
   },
   {
@@ -172,4 +172,10 @@ export const CartButtons = [
     icon: <ReturnIcon />,
   },
 ];
+
+export const DataCart = [
+  {
+    
+  }
+]
 

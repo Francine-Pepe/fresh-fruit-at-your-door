@@ -1,8 +1,11 @@
-import { Box, Container, Flex } from "@chakra-ui/react";
+import { Box, Container, Flex, Divider } from "@chakra-ui/react";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
+import MinusIcon from "../Icons/MinusIcon";
+import PlusIconProduct from "../Icons/PlusIconProduct";
 import { addCart, delCart } from "../Redux/Action";
+import styles from "./Cart.module.css";
 
 const Cart = () => {
   const state = useSelector((state) => state.handleCart);
@@ -17,8 +20,12 @@ const Cart = () => {
 
   const emptyCart = () => {
     return (
-      <Container pt="10rem" pb="10rem" maxW="container.md" h="auto">
-        <Flex flexDirection="column">
+      <Container maxW="container.md" h="auto" pt="10rem">
+        <Flex
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+        >
           <Box>
             <h3>Your Cart is Empty</h3>
           </Box>
@@ -29,60 +36,48 @@ const Cart = () => {
   const cartItems = (product) => {
     return (
       <>
-        <Container
-          maxW="container.md"
-          // w="100vw"
-          bg="#ffff"
-          centerContent
-          boxShadow="0 0 2px 2px #cccc"
-          borderRadius="5px"
-          mt="3.5rem"
-        >
-          <Flex flexDirection="column">
-            <Box>
-              <img
-                src={product.image}
-                alt={product.name}
-                height="200px"
-                width="180px"
-              />
-            </Box>
-            <div className="col-md-4">
-              <h3>{product.name}</h3>
-              <p className="lead fw-bold">
-                {product.qty} X ${product.price} = €
-                {product.qty * product.price}
-              </p>
-              <button
-                className="btn btn-outline-dark me-4"
-                onClick={() => handleDel(product)}
-              >
-                -
-              </button>
-              <button
-                className="btn btn-outline-dark"
-                onClick={() => handleAdd(product)}
-              >
-                +
-              </button>
-            </div>
+        <div className={styles.main_container_cart}>
+          <Flex h="auto" justifyContent="center" alignItems="center">
+            <Container className={styles.cart_container} >
+              <Flex justifyContent="space-around" w="50vw" alignItems="center">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className={styles.fruit_cards_cart}
+                />
+
+                <Box>
+                  <h1>{product.name}</h1>
+                  <h2>Season: {product.category}</h2>
+                  <h2>Origin: {product.origin}</h2>
+                  <p>
+                    Price : {product.price} € / {product.unit} <br />
+                    Qty : {product.qty} {product.unit} <br />
+                    <strong>Total : {product.qty * product.price} €</strong>
+                  </p>
+                  <Flex gap="2rem">
+                    <button onClick={() => handleDel(product)}>
+                      <MinusIcon />
+                    </button>
+                    <button onClick={() => handleAdd(product)}>
+                      <PlusIconProduct />
+                    </button>
+                  </Flex>
+                </Box>
+              </Flex>
+            </Container>
           </Flex>
-        </Container>
+        </div>
       </>
     );
   };
   const buttons = () => {
     return (
       <>
-        <div className="container">
-          <div className="row">
-            <NavLink
-              to="/checkout"
-              className="btn btn-outline-dark mb-5 w-25 mx-auto"
-            >
-              Proceed to Checkout
-            </NavLink>
-          </div>
+        <div className={styles.checkout_button_container}>
+          <button className={styles.checkout_button}>
+            <NavLink to="/checkout">Proceed to Checkout</NavLink>
+          </button>
         </div>
       </>
     );

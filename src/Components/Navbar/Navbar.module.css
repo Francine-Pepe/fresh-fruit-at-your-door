@@ -1,6 +1,6 @@
 .navbar_container {
   width: 100vw;
-  height: 5rem;
+  /* height: 5rem; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -8,6 +8,8 @@
   padding-top: 3.188rem;
   position: absolute;
   z-index: 2;
+  border: 1px solid red;
+  /* margin-bottom: 15rem; */
 }
 
 .nav > div {
