@@ -1,20 +1,19 @@
-.cart_header {
-  width: 50vw;
-  text-align: center;
-  display: flex;
-}
-
 .cart_container {
-  width: 50vw;
+  width: 40vw;
   justify-content: space-between;
   align-items: center;
   display: flex;
-  background-color: #cccccc;
-  padding: 1rem;
-  margin: 1rem;
+  background-color: #ffffff;
+  padding: 0.9rem;
+  /* margin: 4.2rem 2rem 2rem 0; */
   border-radius: 5px;
+  /* box-shadow: 0 0 2px 2px #cccc; */
+  border-bottom: 1px solid #cccccc;
 }
 
+.cart_container img {
+  border-radius: 5px;
+}
 /* Cart.js  */
 
 .basket_container,
@@ -26,10 +25,89 @@
   border-radius: 5px;
 }
 
+.fruit_cards_cart {
+  width: 40%;
+  height: 40%;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main_container_cart {
+  margin-top: 3rem;
+}
+
+.checkout_button {
+  width: 12rem;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  color: #707070;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
 /* CartBtn */
 
 .cart_btn {
   padding: 0 1rem;
 }
 
+/* CartPage */
 
+.cart_page h1 {
+  text-transform: uppercase;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.cart_page {
+  height: auto;
+
+  /* padding-bottom: 10rem; */
+}
+
+/* Checkout */
+
+.checkout_container {
+  background-image: url("../Assets/background_checkout.jpg");
+  width: 100%;
+  height: 50rem;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+}
+
+.checkout_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  gap: 5rem;
+  margin-right: 5rem;
+}
+
+.checkout_content h1 {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.checkout_content p {
+  font-size: 1.2rem;
+}
+
+.checkout_box {
+  text-align: center;
+  width: 30%;
+  height: auto;
+  border-radius: 5px;
+  padding: 5rem;
+}

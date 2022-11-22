@@ -10,7 +10,9 @@ import Footer from "./Components/Footer/Footer";
 import Products from "./Components/Products/Products";
 import Product from "./Components/Products/Product";
 import Cart from "./Components/Cart/Cart";
-import ProductModal from "./Components/Products/ProductModal"
+import ProductModal from "./Components/Products/ProductModal";
+import CartPage from "./Components/Cart/CartPage";
+import Checkout from "./Components/Cart/Checkout";
 
 function App(props) {
   return (
@@ -21,14 +23,14 @@ function App(props) {
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route path="/howitworks" element={<HowItWorksFullPage />} />
-          {/* <Route path="/fruitcatalogue" element={<FruitCatalogue />} /> */}
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<Product />} />
-          <Route path="/cart" element={<Cart />} />
+          {/* <Route path="/products/:id" element={<ProductModal />} /> */}
+          <Route path="/cartpage" element={<CartPage />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
 
-          {/* <Routes path="/season/:name" element={<FruitSeason />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

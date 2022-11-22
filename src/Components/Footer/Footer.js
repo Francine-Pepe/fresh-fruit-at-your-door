@@ -26,7 +26,7 @@ function Footer(props) {
         <hr id={styles.footer_hr} />
 
         <div className={styles.footer_content}>
-          <FruitSeason  />
+          {/* <FruitSeason  /> */}
         </div>
         <hr id={styles.footer_hr} />
         <div className={styles.footer_content}>

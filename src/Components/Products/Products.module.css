@@ -5,8 +5,8 @@
 }
 
 .fruit_cards_image {
-  width: 40%;
-  height: 40%;
+  width: 30%;
+  height: 30%;
   object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -45,20 +45,6 @@ input[type="number"]::-webkit-outer-spin-button {
   text-align: center;
 }
 
-.add_button {
-  color: #39bf99;
-  border: 2px solid #39bf99;
-}
-
-.remove_button {
-  color: #ff0000;
-  border: 2px solid #ff0000;
-}
-
-form {
-  display: flex;
-  gap: 1rem;
-}
 
 .fruit_cards_container {
   width: 100%;
@@ -73,20 +59,30 @@ form {
   border-radius: 5px;
 }
 
-.buy_now_button {
+/* .buy_now_button {
   width: 15rem;
   padding: 1rem;
-  
-}
+} */
 
-.product_modal_button {
+.product_modal_button,
+.checkout_button,
+.buy_now_button {
   width: 12rem;
   padding: 0.5rem;
   font-size: 0.7rem;
 }
 
+.season_buttons button {
+  width: 8rem;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  z-index: 1;
+}
+
 .buy_now_button,
-.product_modal_button {
+.product_modal_button,
+.season_buttons button,
+.checkout_button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,12 +105,26 @@ form {
 }
 
 .buy_now_button:hover,
-.product_modal_button:hover {
+.product_modal_button:hover,
+.season_buttons button:hover {
   background-position: left bottom;
 }
 
 .product_information {
   border-right: 1px solid #cccccc;
+}
+
+.show_products_container h1 {
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+.show_products_container_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 /* Media Queries */

@@ -1,19 +1,6 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
-import {
-  Container,
-  Flex,
-  Box,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  Button,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Container, Flex, Box, Button } from "@chakra-ui/react";
 import styles from "./Products.module.css";
 import { NavLink } from "react-router-dom";
 import Loading from "../Loading/Loading";
@@ -21,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addCart } from "../Redux/Action";
 import { CartButtons } from "../../data";
 import PlusIcon from "../Icons/PlusIcon";
+import CartBtn from "../Cart/CartBtn";
 
 function Product() {
   const { id } = useParams();
@@ -45,6 +33,10 @@ function Product() {
     getProduct();
   }, []);
 
+  const handleClick = () => {
+    alert("button click catched");
+  };
+
   const ShowProduct = () => {
     return (
       <>
@@ -67,13 +59,21 @@ function Product() {
               <Flex flexDirection="column" justifyContent="center" gap="1rem">
                 <h1>{product.name}</h1>
                 <h2>Season: {product.category}</h2>
+                <h2>Origin: {product.origin}</h2>
                 <h2>
-                  Price: € {product.price} / {product.unit}
+                  Price: {product.price} € / {product.unit}
                 </h2>
                 <Box gap="0.5rem">
                   <button
                     className={styles.product_modal_button}
-                    onClick={() => addProduct(product)}
+                    onClick={() =>
+                      addProduct(
+                        product,
+                        alert(
+                          `Your ${product.name} was sucessfully added to the cart`
+                        )
+                      )
+                    }
                   >
                     <PlusIcon /> Add to cart
                   </button>

@@ -1,4 +1,12 @@
-import { Box, Button, Container, Flex, TagLabel, Tag } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  TagLabel,
+  Tag,
+  Divider,
+} from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import Loading from "../Loading/Loading";
 import styles from "./Products.module.css";
@@ -44,20 +52,22 @@ function Products(props) {
     setFilter(updatedList);
   };
 
-  const ShowProducts = () => {
+  const ShowProducts = (props) => {
     return (
       <>
         <Flex
           alignItems="center"
           justifyContent="center"
-          gap="4rem"
+          gap="5rem"
           flexWrap="wrap"
+          w="100vw"
+          className={styles.season_buttons}
         >
-          <Button onClick={() => setFilter(data)}>All</Button>
-          <Button onClick={() => filterProduct("Winter")}>Winter</Button>
-          <Button onClick={() => filterProduct("Spring")}>Spring</Button>
-          <Button onClick={() => filterProduct("Summer")}>Summer</Button>
-          <Button onClick={() => filterProduct("Autumn")}>Autumn</Button>
+          <button onClick={() => setFilter(data)}>All</button>
+          <button onClick={() => filterProduct("Winter")}>Winter</button>
+          <button onClick={() => filterProduct("Spring")}>Spring</button>
+          <button onClick={() => filterProduct("Summer")}>Summer</button>
+          <button onClick={() => filterProduct("Autumn")}>Autumn</button>
         </Flex>
         {/* data && data.slice(0, visible) */}
         {filter.map(
@@ -77,7 +87,7 @@ function Products(props) {
             return (
               <>
                 <Container
-                  maxW="container.md"
+                  maxW="container.lg"
                   bg="#ffff"
                   centerContent
                   boxShadow="0 0 2px 2px #cccc"
@@ -85,10 +95,10 @@ function Products(props) {
                   margin="1rem"
                   key={id}
                 >
-                  <Flex>
                     <Box padding="4" color="black" w="100%">
                       <Flex
                         alignItems="center"
+                        justifyContent="space-evenly"
                         sx={{
                           "@media screen and (max-width: 958px)": {
                             display: "flex",
@@ -103,7 +113,7 @@ function Products(props) {
                         />
 
                         <Flex
-                          w="60%"
+                          w="30%"
                           flexDirection="column"
                           p="2rem"
                           gap="0.5rem"
@@ -125,7 +135,7 @@ function Products(props) {
 
                             <h2>Season: {category}</h2>
                             <h2>
-                              Price: € {price} / {unit}
+                              Price: {price} € / {unit}
                             </h2>
                             <h2>Origin: {origin}</h2>
 
@@ -155,7 +165,6 @@ function Products(props) {
                         </button>
                       </Flex>
                     </Box>
-                  </Flex>
                 </Container>
               </>
             );
@@ -166,18 +175,27 @@ function Products(props) {
   };
 
   return (
-    <Container maxW="fullWidth" centerContent pt="10rem">
-      <h1>Fruit Catalogue</h1>
+    <Container
+      maxW="fullWidth"
+      centerContent
+      pt="10rem"
+      mb="10rem"
+      className={styles.show_products_container}
+    >
+      <Divider />
+      <strong>
+        <h1>Fruit Catalogue</h1>
+      </strong>
+      <Divider />
 
-      <Flex w="100vw">
-        <Box w="70vw" m="2rem">
+      <Flex w="100vw" justifyContent="center" alignItems="center" >
+        <Box w="80%" m="2rem" className={styles.show_products_container_content}>
           {loading ? <Loading /> : <ShowProducts />}
         </Box>
-        <Box w="30vw" m="2rem">
+        {/* <Box w="50vw" m="3rem 0">
           <Cart />
-        </Box>
+        </Box> */}
       </Flex>
-      {/* <LoadMoreButton onClick={showMoreItems} /> */}
     </Container>
   );
 }

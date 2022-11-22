@@ -12,7 +12,7 @@ function Dropdown() {
         <MenuButton
           w={8}
           h={8}
-          color="white"
+          color="#f23d91"
           as={HamburgerIcon}
           aria-label="Options"
           icon={<HamburgerIcon />}
