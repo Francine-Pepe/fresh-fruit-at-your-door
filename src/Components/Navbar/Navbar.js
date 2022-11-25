@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import CartBtn from "../Cart/CartBtn";
 
 const Navbar = (props) => {
-
   return (
     <>
       <div className={styles.navbar_container}>
@@ -32,7 +31,9 @@ const Navbar = (props) => {
             })}
           </ul>
         </nav>
-        <CartBtn />
+        <div className={styles.cart_btn}>
+          <CartBtn />
+        </div>
       </div>
     </>
   );

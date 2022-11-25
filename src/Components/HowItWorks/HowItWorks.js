@@ -19,7 +19,7 @@ function HowItWorks() {
                   <div className={styles.how_it_works_preview_text}>
                     <p>{data.text}</p>
                   </div>
-                  <NavLink to={data.link}>
+                  <NavLink to={data.link} >
                     <ContinueReadingButton />
                   </NavLink>
                 </>

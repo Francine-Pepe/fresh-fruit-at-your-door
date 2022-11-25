@@ -15,6 +15,10 @@ import ShoppingCart from "./Components/Icons/ShoppingCart";
 import ReturnIcon from "./Components/Icons/ReturnIcon";
 import ContactIcon from "./Components/Icons/ContactIcon";
 import MapIcon from "./Components/Icons/MapIcon";
+import WinterIcon from "./Components/Icons/WinterIcon";
+import SpringIcon from "./Components/Icons/SpringIcon";
+import SummerIcon from "./Components/Icons/SummerIcon";
+import AutumnIcon from "./Components/Icons/AutumnIcon";
 
 export const navData = [
   {
@@ -164,7 +168,7 @@ export const CartButtons = [
   {
     name: "Go to cart",
     link: "/cartpage",
-    icon: <ShoppingCart />,
+    icon: <ShoppingCart width={"1rem"} />,
   },
   {
     name: "Buy more",
@@ -173,9 +177,24 @@ export const CartButtons = [
   },
 ];
 
-export const DataCart = [
+export const SeasonButtonIcon = [
   {
-    
-  }
-]
+    icon: <WinterIcon />,
+    filterProduct: "Winter"
+  },
+  {
+    icon: <SpringIcon />,
+    filterProduct: "Spring"
 
+  },
+  {
+    icon: <SummerIcon />,
+    filterProduct: "Summer"
+
+  },
+  {
+    icon: <AutumnIcon />,
+    filterProduct: "Autumn"
+
+  },
+];

@@ -4,7 +4,7 @@ import styles from "./Loading.module.css";
 
 function Loading() {
   return (
-    <Flex alignItems="center" justifyContent="center">
+    <Flex alignItems="center" justifyContent="center" h="20rem">
       <div id={styles.container} className={styles.loading}>
         <svg viewBox="0 0 100 100">
           <defs>

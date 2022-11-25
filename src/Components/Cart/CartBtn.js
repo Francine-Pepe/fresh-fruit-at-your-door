@@ -15,10 +15,13 @@ import {
   Button,
   useDisclosure,
   Divider,
+  Badge,
 } from "@chakra-ui/react";
 import Cart from "./Cart";
+// import Home from "../Home/Home"
+import ShoppingCart from "../Icons/ShoppingCart";
 
-const CartBtn = () => {
+const CartBtn = (props) => {
   const state = useSelector((state) => state.handleCart);
 
   // Drawer
@@ -35,7 +38,7 @@ const CartBtn = () => {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton  />
+          <DrawerCloseButton />
           <DrawerHeader>
             <div className={styles.cart_page}>
               <Divider />
@@ -51,7 +54,7 @@ const CartBtn = () => {
           </DrawerBody>
 
           <DrawerFooter justifyContent="center">
-            <Button variant="outline" mr={3} onClick={onClose}>
+            <Button colorScheme='red' variant="outline" mr={3} onClick={onClose}>
               Cancel
             </Button>
           </DrawerFooter>
@@ -60,15 +63,11 @@ const CartBtn = () => {
 
       <Flex>
         <button to={"/cartpage"} ref={btnRef} onClick={onOpen}>
-          <Icon
-            icon="clarity:shopping-cart-line"
-            color="#707070"
-            width="33"
-            height="33"
-          />
+          <ShoppingCart width={"1.5rem"} />          
         </button>
-        <span className={styles.cart_btn}>|</span>
-        {state.length}
+        <span className={styles.cart_btn}>
+          <Badge colorScheme="gray" variant='outline' p="0.5rem" borderRadius="50">{state.length}</Badge>
+        </span>
       </Flex>
     </>
   );
