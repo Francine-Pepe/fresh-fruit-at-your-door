@@ -1,0 +1,44 @@
+.season_icons {
+  width: 2rem;
+  height: auto;
+}
+
+.hide {
+  position: absolute;
+  top: 100%;
+  right: -75%;
+  background: #39bf99;
+  color: white;
+  font-size: 0.7rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.season_icons:hover + .hide {
+  display: block;
+}
+
+.icon_nav_mobile:hover div {
+  width: 5rem;
+  height: auto;
+  visibility: visible;
+  opacity: 0.7;
+}
+
+.icon_nav_mobile {
+  position: relative;
+  float: center;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 375px) {
+  .season_icons {
+    width: 1.5rem;
+    height: auto;
+  }
+}

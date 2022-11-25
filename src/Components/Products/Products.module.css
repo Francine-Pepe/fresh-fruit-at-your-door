@@ -45,7 +45,6 @@ input[type="number"]::-webkit-outer-spin-button {
   text-align: center;
 }
 
-
 .fruit_cards_container {
   width: 100%;
   /* padding: 1rem; */
@@ -54,8 +53,8 @@ input[type="number"]::-webkit-outer-spin-button {
 /* Products */
 
 .fruit_cards_image_product {
-  width: 25rem;
-  height: auto;
+  width: 50%;
+  height: 50%;
   border-radius: 5px;
 }
 
@@ -89,16 +88,16 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0.5rem;
   gap: 1rem;
   height: auto;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  border-radius: 5px;
-  border: 1px solid #cccccc;
-  color: #707070;
   text-transform: uppercase;
   background: linear-gradient(
     to right,
     var(--chakra-colors-gray-100) 50%,
     white 50%
   );
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  color: #707070;
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;
@@ -114,6 +113,10 @@ input[type="number"]::-webkit-outer-spin-button {
   border-right: 1px solid #cccccc;
 }
 
+.product_information_page h1 {
+  padding: 0;
+}
+
 .show_products_container h1 {
   text-transform: uppercase;
   padding: 1rem 0;
@@ -124,7 +127,18 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+}
+
+.season_buttons_mobile button {
+  border: 1px solid #cccccc;
+  padding: 1rem;
+  border-radius: 5px;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  color: #707070;
+  background-color: transparent;
 }
 
 /* Media Queries */
@@ -135,10 +149,64 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
+@media screen and (max-width: 954px) {
+  .season_buttons_mobile button {
+    display: block;
+  }
+
+  .season_buttons button {
+    display: none;
+  }
+  .cart_btn_mobile {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 958px) {
   .product_information {
     padding: 0.5rem;
-
     border-right: none;
+  }
+}
+
+@media screen and (max-width: 845px) {
+  .product_information {
+    padding: 0;
+  }
+  .fruit_cards_image {
+    width: 35%;
+    height: 35%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .product_modal_button,
+.checkout_button {
+  width: 30vw;
+}
+}
+
+@media screen and (max-width: 480px) {
+  .fruit_cards_image {
+    width: 50%;
+    height: 50%;
+  }
+  .product_information {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 379px) {
+  .product_information {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .season_buttons_mobile button {
+    padding: 0.75rem;
+  }
+  .buy_now_button {
+    width: 50vw;
   }
 }

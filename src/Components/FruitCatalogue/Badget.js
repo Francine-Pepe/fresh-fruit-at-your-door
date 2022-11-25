@@ -10,7 +10,7 @@ function Badget() {
 
   return (
     <>
-      <Tag size="md" colorScheme="red" borderRadius="full" w="auto">
+      <Tag size="md" colorScheme="red" borderRadius="50" w="auto">
         {badget &&
           badget.map((badget) => {
             return (

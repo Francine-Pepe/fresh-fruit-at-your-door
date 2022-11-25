@@ -13,6 +13,12 @@ import styles from "./Products.module.css";
 import { NavLink } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import BasketIcon from "../Icons/BasketIcon";
+import { SeasonButtonIcon } from "../../data";
+import AllIcon from "../Icons/AllIcon";
+import SpringIcon from "../Icons/SpringIcon";
+import WinterIcon from "../Icons/WinterIcon";
+import SummerIcon from "../Icons/SummerIcon";
+import AutumnIcon from "../Icons/AutumnIcon";
 
 function Products(props) {
   const [data, setData] = useState([]);
@@ -58,7 +64,7 @@ function Products(props) {
         <Flex
           alignItems="center"
           justifyContent="center"
-          gap="5rem"
+          gap="3rem"
           flexWrap="wrap"
           w="100vw"
           className={styles.season_buttons}
@@ -68,6 +74,30 @@ function Products(props) {
           <button onClick={() => filterProduct("Spring")}>Spring</button>
           <button onClick={() => filterProduct("Summer")}>Summer</button>
           <button onClick={() => filterProduct("Autumn")}>Autumn</button>
+        </Flex>
+        <Flex
+          alignItems="center"
+          justifyContent="space-evenly"
+          m="0 0.5rem"
+          flexWrap="wrap"
+          w="100vw"
+          className={styles.season_buttons_mobile}
+        >
+          <button onClick={() => setFilter(data)}>
+            <AllIcon />
+          </button>
+          <button onClick={() => filterProduct("Winter")}>
+            <WinterIcon />
+          </button>
+          <button onClick={() => filterProduct("Spring")}>
+            <SpringIcon />
+          </button>
+          <button onClick={() => filterProduct("Summer")}>
+            <SummerIcon />
+          </button>
+          <button onClick={() => filterProduct("Autumn")}>
+            <AutumnIcon />
+          </button>
         </Flex>
         {/* data && data.slice(0, visible) */}
         {filter.map(
@@ -92,79 +122,95 @@ function Products(props) {
                   centerContent
                   boxShadow="0 0 2px 2px #cccc"
                   borderRadius="5px"
-                  margin="1rem"
+                  margin="2rem"
                   key={id}
+                  sx={{
+                    "@media screen and (max-width: 845px)": {
+                      maxWidth: "container.xl",
+                    },
+                  }}
                 >
-                    <Box padding="4" color="black" w="100%">
+                  <Box padding="4" color="black" w="100%">
+                    <Flex
+                      alignItems="center"
+                      justifyContent="space-evenly"
+                      flexWrap="wrap"
+                      sx={{
+                        "@media screen and (max-width: 480px)": {
+                          flexDirection: "column",
+                        },
+                        "@media screen and (max-width: 379px)": {
+                          alignContent: "center",
+                        },
+                      }}
+                    >
+                      <img
+                        src={image}
+                        alt="/"
+                        className={styles.fruit_cards_image}
+                      />
                       <Flex
-                        alignItems="center"
-                        justifyContent="space-evenly"
+                        w="30%"
+                        flexDirection="column"
+                        p="2rem"
+                        gap="0.5rem"
                         sx={{
-                          "@media screen and (max-width: 958px)": {
-                            display: "flex",
-                            flexDirection: "column",
+                          "@media screen and (max-width: 1023px)": {
+                            padding: "1.5rem",
+                            alignItems: "center",
+                          },
+                          "@media screen and (max-width: 845px)": {
+                            width: "50%",
+                          },
+                          "@media screen and (max-width: 600px)": {
+                            padding: "0",
                           },
                         }}
                       >
-                        <img
-                          src={image}
-                          alt="/"
-                          className={styles.fruit_cards_image}
-                        />
+                        <div className={styles.product_information}>
+                          <strong>
+                            <h1>{name}</h1>
+                          </strong>
+                          <h2>Season: {category}</h2>
+                          <h2>
+                            Price: {price} € / {unit}
+                          </h2>
+                          <h2>Origin: {origin}</h2>
 
-                        <Flex
-                          w="30%"
-                          flexDirection="column"
-                          p="2rem"
-                          gap="0.5rem"
-                          sx={{
-                            "@media screen and (max-width: 1023px)": {
-                              padding: "1.5rem",
-                              alignItems: "flex-start",
-                            },
-                            "@media screen and (max-width: 600px)": {
-                              padding: "0",
-                              alignItems: "flex-start",
-                            },
-                          }}
-                        >
-                          <div className={styles.product_information}>
-                            <strong>
-                              <h1>{name}</h1>
-                            </strong>
-
-                            <h2>Season: {category}</h2>
-                            <h2>
-                              Price: {price} € / {unit}
-                            </h2>
-                            <h2>Origin: {origin}</h2>
-
-                            <Flex gap="0.5rem" flexWrap="wrap">
-                              {badget.map((badget, color, id) => {
-                                return (
-                                  <Tag
-                                    size="md"
-                                    borderRadius="full"
-                                    w="fit-content"
-                                    key={id}
-                                    backgroundColor={badget.color}
-                                    color="#ffff"
-                                    p="0.5rem"
-                                  >
-                                    <TagLabel>{badget.name}</TagLabel>
-                                  </Tag>
-                                );
-                              })}
-                            </Flex>
-                          </div>
-                        </Flex>
-
-                        <button className={styles.buy_now_button}>
-                          <BasketIcon />
-                          <NavLink to={`/products/${id}`}>Buy now</NavLink>
-                        </button>
+                          <Flex
+                            gap="0.5rem"
+                            flexWrap="wrap"
+                            sx={{
+                              "@media screen and (max-width: 480px)": {
+                                alignItems: "center",
+                                justifyContent: "center",
+                              },
+                            }}
+                          >
+                            {badget.map((badget, color, id) => {
+                              return (
+                                <Tag
+                                  size="md"
+                                  borderRadius="full"
+                                  w="fit-content"
+                                  key={id}
+                                  backgroundColor={badget.color}
+                                  color="#ffff"
+                                  p="0.5rem"
+                                >
+                                  <TagLabel>{badget.name}</TagLabel>
+                                </Tag>
+                              );
+                            })}
+                          </Flex>
+                        </div>
                       </Flex>
-                    </Box>
+                      <button className={styles.buy_now_button}>
+                        <BasketIcon />
+                        <NavLink to={`/products/${id}`}>Buy now</NavLink>
+                      </button>
+                    </Flex>
+                  </Box>
                 </Container>
               </>
             );
@@ -188,13 +234,14 @@ function Products(props) {
       </strong>
       <Divider />
 
-      <Flex w="100vw" justifyContent="center" alignItems="center" >
-        <Box w="80%" m="2rem" className={styles.show_products_container_content}>
+      <Flex w="100vw" justifyContent="center" alignItems="center">
+        <Box
+          w="80%"
+          m="2rem"
+          className={styles.show_products_container_content}
+        >
           {loading ? <Loading /> : <ShowProducts />}
         </Box>
-        {/* <Box w="50vw" m="3rem 0">
-          <Cart />
-        </Box> */}
       </Flex>
     </Container>
   );

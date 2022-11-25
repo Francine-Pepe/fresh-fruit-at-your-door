@@ -8,11 +8,11 @@ function Checkout() {
       <div className={styles.checkout_content}>
         <div className={styles.checkout_box}>
           <div>
-            <h1>Checkout Page</h1>
+            <h1>Checkout</h1>
           </div>
           <div>
             <p>
-              Thanks for buying with Fresh Fruit at your door. Your goodies are being prepared for you.
+              Thanks for buying with Fresh Fruit at your door. Your goodies are being separated for you.
             </p>
           </div>
           <div>
