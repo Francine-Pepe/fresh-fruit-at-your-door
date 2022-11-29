@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "./static/css/main.66587a0e.css",
+    "main.js": "./static/js/main.89da2425.js",
+    "static/js/787.0b6ac962.chunk.js": "./static/js/787.0b6ac962.chunk.js",
+    "static/media/aboutU_woodBox.jpg": "./static/media/aboutU_woodBox.da95023706453283410e.jpg",
+    "static/media/aboutUs_appleBox.jpg": "./static/media/aboutUs_appleBox.337688acc83e6ee393b4.jpg",
+    "static/media/aboutUs_kiwi.jpg": "./static/media/aboutUs_kiwi.c692d3b1b41d20214cec.jpg",
+    "static/media/aboutUs_papaya.jpg": "./static/media/aboutUs_papaya.154c0d170bb818025a7a.jpg",
+    "static/media/aboutUs_fig.jpg": "./static/media/aboutUs_fig.5c81b23a40c6c64c7121.jpg",
+    "static/media/background_landpage_1920X1280.jpg": "./static/media/background_landpage_1920X1280.eda8f784719237719b97.jpg",
+    "static/media/aboutUs_grapes.jpg": "./static/media/aboutUs_grapes.f17e3b3047c92240db41.jpg",
+    "static/media/contact_bg_medium.jpg": "./static/media/contact_bg_medium.2ffe500c1c5bf2d6b499.jpg",
+    "static/media/how_it_works_1920X1280.jpg": "./static/media/how_it_works_1920X1280.056399412cf2656ba742.jpg",
+    "static/media/background_checkout.jpg": "./static/media/background_checkout.47aa6dff7cd0bf8b051b.jpg",
+    "static/media/sun.png": "./static/media/sun.c5d67460c807f4d43e1b.png",
+    "static/media/snow-flake.png": "./static/media/snow-flake.8e6090e445a27faed155.png",
+    "static/media/spring.png": "./static/media/spring.3a97c5b45f1765b60843.png",
+    "static/media/fruits.png": "./static/media/fruits.f95a570030ec9f8cab11.png",
+    "static/media/calendar.png": "./static/media/calendar.40fac13530d396565b54.png",
+    "static/media/leaves.png": "./static/media/leaves.1a58d9d9313feb0d24df.png",
+    "static/media/wallet.png": "./static/media/wallet.cba24ba92a0800eaa515.png",
+    "static/media/fruit.png": "./static/media/fruit.dcd059c702e191fc31b5.png",
+    "static/media/logo_FreshFruit_transparent_bg_small.png": "./static/media/logo_FreshFruit_transparent_bg_small.46bf89c125a79a195a36.png",
+    "static/media/conversation.png": "./static/media/conversation.5e5b5392af82f7dece33.png",
+    "static/media/delivery-truck.png": "./static/media/delivery-truck.fa367f7e64b3d5101203.png",
+    "static/media/alle.png": "./static/media/alle.ce2a47129f31687bf061.png",
+    "index.html": "./index.html",
+    "main.66587a0e.css.map": "./static/css/main.66587a0e.css.map",
+    "main.89da2425.js.map": "./static/js/main.89da2425.js.map",
+    "787.0b6ac962.chunk.js.map": "./static/js/787.0b6ac962.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66587a0e.css",
+    "static/js/main.89da2425.js"
+  ]
+}
