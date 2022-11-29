@@ -17,16 +17,15 @@ function App(props) {
     <>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Navbar />
-
         <Routes>
           <Route index path="/" element={<Home />} />
-          <Route path="/howitworks" element={<HowItWorksFullPage />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<Product />} />
-          <Route path="/cartpage" element={<CartPage />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route exact path="/howitworks" element={<HowItWorksFullPage />} />
+          <Route exact path="/products" element={<Products />} />
+          <Route exact path="/products/:id" element={<Product />} />
+          <Route exact path="/cartpage" element={<CartPage />} />
+          <Route exact path="/checkout" element={<Checkout />} />
+          <Route exact path="/aboutus" element={<AboutUs />} />
+          <Route exact path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>
