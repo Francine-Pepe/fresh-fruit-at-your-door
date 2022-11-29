@@ -1,7 +1,7 @@
 import styles from "./Cart.module.css";
 import { useSelector } from "react-redux";
-import { Icon } from "@iconify/react";
-import { NavLink } from "react-router-dom";
+// import { Icon } from "@iconify/react";
+// import { NavLink } from "react-router-dom";
 import React from "react";
 import {
   Flex,
@@ -18,7 +18,6 @@ import {
   Badge,
 } from "@chakra-ui/react";
 import Cart from "./Cart";
-// import Home from "../Home/Home"
 import ShoppingCart from "../Icons/ShoppingCart";
 
 const CartBtn = (props) => {
@@ -31,10 +30,17 @@ const CartBtn = (props) => {
   return (
     <>
       <Drawer
+        size="sm"
+        heigh="auto"
         isOpen={isOpen}
         placement="right"
         onClose={onClose}
         finalFocusRef={btnRef}
+        sx={{
+          "@media screen and (max-width: 480px)": {
+            width: "50vw"
+          },
+        }}
       >
         <DrawerOverlay />
         <DrawerContent>
@@ -52,9 +58,13 @@ const CartBtn = (props) => {
           <DrawerBody>
             <Cart />
           </DrawerBody>
-
           <DrawerFooter justifyContent="center">
-            <Button colorScheme='red' variant="outline" mr={3} onClick={onClose}>
+            <Button
+              colorScheme="red"
+              variant="outline"
+              mr={3}
+              onClick={onClose}
+            >
               Cancel
             </Button>
           </DrawerFooter>
@@ -63,10 +73,17 @@ const CartBtn = (props) => {
 
       <Flex>
         <button to={"/cartpage"} ref={btnRef} onClick={onOpen}>
-          <ShoppingCart width={"1.5rem"} />          
+          <ShoppingCart width={"1.5rem"} />
         </button>
         <span className={styles.cart_btn}>
-          <Badge colorScheme="gray" variant='outline' p="0.5rem" borderRadius="50">{state.length}</Badge>
+          <Badge
+            colorScheme="gray"
+            variant="outline"
+            p="0.5rem"
+            borderRadius="50"
+          >
+            {state.length}
+          </Badge>
         </span>
       </Flex>
     </>

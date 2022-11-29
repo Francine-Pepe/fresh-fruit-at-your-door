@@ -47,7 +47,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .fruit_cards_container {
   width: 100%;
-  /* padding: 1rem; */
 }
 
 /* Products */
@@ -57,11 +56,6 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 50%;
   border-radius: 5px;
 }
-
-/* .buy_now_button {
-  width: 15rem;
-  padding: 1rem;
-} */
 
 .product_modal_button,
 .checkout_button,
@@ -196,9 +190,29 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
+@media screen and (max-width: 402px) {
+  .product_modal_button  h6 {
+    display: none;
+  }
+  .product_modal_button  {
+    gap: 0;
+  }
+}
+
+
 @media screen and (max-width: 379px) {
   .product_information {
     width: 40vw;
+  }
+
+  .product_information_page h1 {
+    padding: 0.5rem;
+    font-size: 1rem;
+
+  }
+
+  .product_information_page h2 {
+    font-size: 0.9rem;
   }
 }
 

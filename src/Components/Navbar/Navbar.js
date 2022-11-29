@@ -3,7 +3,6 @@ import styles from "./Navbar.module.css";
 import Logo from "./../Assets/logo_FreshFruit_transparent_bg_small.png";
 import Dropdown from "./Dropdown";
 import { navData } from "../../data";
-import { useSelector } from "react-redux";
 import CartBtn from "../Cart/CartBtn";
 
 const Navbar = (props) => {
@@ -23,8 +22,8 @@ const Navbar = (props) => {
             {navData.map((data, index) => {
               return (
                 <>
-                  <li className={styles.navbar}>
-                    <NavLink to={data.link}>{data.name}</NavLink>
+                  <li className={styles.navbar} key={index}>
+                    <NavLink to={data.link} className={styles.growing_border}>{data.name}</NavLink>
                   </li>
                 </>
               );

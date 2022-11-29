@@ -4,12 +4,7 @@ import { Icon } from "@iconify/react";
 function PlusIconProduct() {
   return (
     <div>
-      <Icon
-        icon="ph:plus-circle-light"
-        color="#39bf99"
-        width="24"
-        height="24"
-      />
+      <Icon icon="circum:square-plus" color="#39bf99" width="30" height="30" />
     </div>
   );
 }

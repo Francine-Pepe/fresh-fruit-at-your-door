@@ -18,11 +18,11 @@
 
 .home_text_container {
   width: 50%;
-  height: 23rem;
-  /* background-color: rgba(255, 255, 255, 0.21); */
+  height: 33.1rem;
   backdrop-filter: blur(20px);
   float: right;
-  margin-top: 10.15rem;
+  padding: 8rem 0;
+  /* margin-top: 10.15rem; */
   border-radius: 5px 5px 0 0;
 }
 

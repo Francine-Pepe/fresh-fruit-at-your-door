@@ -25,7 +25,7 @@ function Contact() {
             {addressData.map((data, index) => {
               return (
                 <>
-                  <div className={styles.contacts}>
+                  <div className={styles.contacts} key={index}>
                     <a href="https://www.openstreetmap.org/#map=19/53.58842/9.97313" target={"blank"}>{data.icon}</a>
                     <h3>{data.title}</h3>
                     <span>
@@ -38,7 +38,7 @@ function Contact() {
             {contactData.map((data, index) => {
               return (
                 <>
-                  <div className={styles.contacts}>
+                  <div className={styles.contacts} key={index}>
                     {data.icon}
                     <h3>{data.title}</h3>
                     <p>{data.address}</p>
