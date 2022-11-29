@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./HowItWorks.module.css";
 import { howItWorksText } from "../../data";
-import { Button } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import ContinueReadingButton from "../Buttons/ContinueReadingButton";
 

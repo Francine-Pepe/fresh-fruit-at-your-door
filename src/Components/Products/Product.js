@@ -1,20 +1,20 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
-import { Container, Flex, Box, Button, Divider } from "@chakra-ui/react";
+import { Container, Flex, Box, Divider } from "@chakra-ui/react";
 import styles from "./Products.module.css";
 import { NavLink } from "react-router-dom";
 import Loading from "../Loading/Loading";
-import { useSelector, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { addCart } from "../Redux/Action";
 import { CartButtons } from "../../data";
 import PlusIcon from "../Icons/PlusIcon";
-import CartBtn from "../Cart/CartBtn";
+ 
 
 function Product() {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
 
   const dispatch = useDispatch();
   const addProduct = (product) => {
