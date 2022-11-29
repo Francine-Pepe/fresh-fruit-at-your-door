@@ -10,7 +10,6 @@ import box from "./Components/Assets/aboutU_woodBox.jpg";
 import apples from "./Components/Assets/aboutUs_appleBox.jpg";
 import papaya from "./Components/Assets/aboutUs_papaya.jpg";
 import kiwi from "./Components/Assets/aboutUs_kiwi.jpg";
-import styles from "./Components/Buttons/Buttons.module.css";
 import ShoppingCart from "./Components/Icons/ShoppingCart";
 import ReturnIcon from "./Components/Icons/ReturnIcon";
 import ContactIcon from "./Components/Icons/ContactIcon";
@@ -19,6 +18,7 @@ import WinterIcon from "./Components/Icons/WinterIcon";
 import SpringIcon from "./Components/Icons/SpringIcon";
 import SummerIcon from "./Components/Icons/SummerIcon";
 import AutumnIcon from "./Components/Icons/AutumnIcon";
+import CheckoutIcon from "./Components/Icons/CheckoutIcon";
 
 export const navData = [
   {
@@ -176,6 +176,22 @@ export const CartButtons = [
     icon: <ReturnIcon />,
   },
 ];
+
+export const CheckoutButtons = [
+  {
+    name: "Buy more",
+    link: "/products",
+    icon: <ReturnIcon />,
+  },
+  {
+    name: "Checkout",
+    link: "/checkout",
+    icon: <CheckoutIcon />,
+  },
+  
+];
+
+
 
 export const SeasonButtonIcon = [
   {

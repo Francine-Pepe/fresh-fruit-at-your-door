@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./AboutUs.module.css";
-// import { aboutUsImagesLeft, aboutUsImagesLeftBottom } from "../../data";
 
 function AboutUsProps(props) {
   const { image1 } = props;

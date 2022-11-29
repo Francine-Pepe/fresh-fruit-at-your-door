@@ -37,8 +37,8 @@
 /* Load more button */
 
 .load_more_button,
-.how_it_works_preview {
-  width: 15rem;
+.how_it_works_preview  {
+  width: 13rem;
   height: auto;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 5px;
@@ -52,10 +52,11 @@
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;
+  cursor: pointer;
 }
 
 .how_it_works_preview {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .load_more_button:hover,

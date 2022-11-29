@@ -3,12 +3,9 @@ import styles from "./Footer.module.css";
 import { NavLink } from "react-router-dom";
 import Logo from "../Assets/logo_FreshFruit_transparent_bg_small.png";
 import SocialMedia from "./SocialMedia";
-// import MenuDrop from "../Navbar/MenuDrop";
 import { navData } from "../../data";
-import FruitSeason from "../FruitSeason/FruitSeason";
 
 function Footer(props) {
-
   const getCurrentYear = () => {
     return new Date().getFullYear();
   };
@@ -25,15 +22,14 @@ function Footer(props) {
         </div>
         <hr id={styles.footer_hr} />
 
-        <div className={styles.footer_content}>
-          {/* <FruitSeason  /> */}
+        {/* <div className={styles.footer_content}>
         </div>
-        <hr id={styles.footer_hr} />
+        <hr id={styles.footer_hr} /> */}
         <div className={styles.footer_content}>
           {navData.map((data, index) => {
             return (
               <nav key={index}>
-                <NavLink to={data.link} >
+                <NavLink to={data.link} className={styles.growing_border}>
                   {data.name}
                 </NavLink>
               </nav>

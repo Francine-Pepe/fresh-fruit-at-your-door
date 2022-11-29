@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Divider } from "@chakra-ui/react";
+import { Box, Container, Flex } from "@chakra-ui/react";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
@@ -6,6 +6,7 @@ import MinusIcon from "../Icons/MinusIcon";
 import PlusIconProduct from "../Icons/PlusIconProduct";
 import { addCart, delCart } from "../Redux/Action";
 import styles from "./Cart.module.css";
+import { CheckoutButtons } from "../../data";
 
 const Cart = () => {
   const state = useSelector((state) => state.handleCart);
@@ -38,8 +39,20 @@ const Cart = () => {
       <>
         <div className={styles.main_container_cart}>
           <Flex h="auto" justifyContent="center" alignItems="center">
-            <Container className={styles.cart_container} >
-              <Flex justifyContent="space-around" w="50vw" alignItems="center">
+            <Container
+              className={styles.cart_container}
+              maxW="container.sm"
+              m="0 2rem"
+              centerContent
+              boxShadow="0 0 2px 2px #cccc"
+              borderRadius="5px"
+              sx={{
+                "@media screen and (max-width: 480px)": {
+                  margin: "0 0.2rem",
+                },
+              }}
+            >
+              <Flex justifyContent="space-around" alignItems="center">
                 <img
                   src={product.image}
                   alt={product.name}
@@ -55,7 +68,13 @@ const Cart = () => {
                     Qty : {product.qty} {product.unit} <br />
                     <strong>Total : {product.qty * product.price} €</strong>
                   </p>
-                  <Flex gap="2rem">
+                  <Flex gap="2rem" 
+                  sx={{
+                    "@media screen and (max-width: 250px)": {
+                      justifyContent: "center"
+                    },
+                  }}
+                  >
                     <button onClick={() => handleDel(product)}>
                       <MinusIcon />
                     </button>
@@ -74,11 +93,31 @@ const Cart = () => {
   const buttons = () => {
     return (
       <>
-        <div className={styles.checkout_button_container}>
-          <button className={styles.checkout_button}>
-            <NavLink to="/checkout">Proceed to Checkout</NavLink>
-          </button>
-        </div>
+        <Flex
+          className={styles.checkout_button_container}
+          justifyContent="space-around"
+          flexWrap="wrap"
+          gap="1rem"
+          sx={{
+            "@media screen and (max-width: 252px)": {
+              flexDirection: "column",
+              alignItems: "center",
+            },
+          }}
+        >
+          {CheckoutButtons.map((data, index) => {
+            return (
+              <>
+                <button className={styles.checkout_button} key={index}>
+                  {data.icon}
+                  <NavLink to={data.link}>
+                    <h6>{data.name}</h6>
+                  </NavLink>
+                </button>
+              </>
+            );
+          })}
+        </Flex>
       </>
     );
   };

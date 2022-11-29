@@ -19,7 +19,6 @@ function Dropdown() {
       <Menu>
         <Flex
           className={styles.cart_btn_mobile}
-          // w="10vw"
           justifyContent="space-between"
         >
           <CartBtn />

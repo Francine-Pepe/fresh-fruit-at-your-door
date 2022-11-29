@@ -8,10 +8,6 @@ function ContactMap() {
   return (
     <>
       <div className={styles.map_container}>
-        {/* <a
-          href="https://www.openstreetmap.org/#map=19/53.58842/9.97313"
-          target={"blank"}
-        > */}
         <Map
           height={"23.688rem"}
           defaultCenter={[53.588416885931466, 9.972663369152546]}

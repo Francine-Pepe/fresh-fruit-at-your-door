@@ -1,13 +1,13 @@
 .navbar_container {
   width: 100vw;
-  /* height: 5rem; */
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   padding-top: 3.188rem;
-  position: absolute;
+  position:fixed;
   z-index: 2;
+  backdrop-filter: blur(20px);
 }
 
 .nav > div {
@@ -29,7 +29,6 @@
 .nav .navbar a {
   text-decoration: none;
   color: #f23d91;
-  /* change the color to white  */
   font-family: "Raleway Black";
 }
 
@@ -47,6 +46,17 @@
 
 .navbar.colorChange {
   color: #000;
+}
+
+.growing_border {
+  width: 8rem;
+  padding-bottom: 2px;
+  border-bottom: 0px solid #ffc5e0;
+  transition: all .2s ease-in-out;
+  text-align: center;
+}
+.growing_border:hover {
+  border-bottom-width: 2px;
 }
 
 /* Dropdown.js CSS */
@@ -86,8 +96,6 @@
   flex-direction: column;
   align-items: center;
   padding: 0.5rem;
-  /* justify-content: center;
-  text-align: center; */
 }
 
 /* Media Queries */
@@ -114,9 +122,4 @@
     display: none;
   }
 }
-/* 
-@media screen and (max-width: 480px) {
-  .logo {
-    width: 50%;
-  }
-} */
+

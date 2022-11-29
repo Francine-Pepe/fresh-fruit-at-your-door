@@ -14,10 +14,10 @@ function HowItWorksFullPage() {
         {howItWorksFullPageText.map((data, index) => {
           return (
             <>
-              <div className={styles.full_page_text_title}>
+              <div className={styles.full_page_text_title} key={index}>
                 <h1>{data.title}</h1>
               </div>
-              <p>{data.text}</p>;
+              <p>{data.text}</p>
             </>
           );
         })}
@@ -28,8 +28,8 @@ function HowItWorksFullPage() {
           return (
             <>
               <div className={styles.right_content_box} key={index}>
-                <div>
-                  <img src={data.image} alt="" width={"70px"} height={"70px"} />
+                <div className={styles.how_it_works_full_page_right_content_image}>
+                  <img src={data.image} alt=""  />
                 </div>
                 <div className={styles.right_content_box}>
                   <p>{data.description}</p>
@@ -41,7 +41,7 @@ function HowItWorksFullPage() {
         {howItWorksExplanationBottom.map((data, index) => {
           return (
             <>
-              <div className={styles.questions_bottom_content}>
+              <div className={styles.questions_bottom_content} key={index}>
                 <div className={styles.questions_bottom_content_image}>
                   <img src={data.image} alt="" width={"70px"} height={"70px"} />
                 </div>

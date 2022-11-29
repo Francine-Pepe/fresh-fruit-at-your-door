@@ -1,7 +1,6 @@
 import { fruitSeason } from "../../data";
 import { NavLink } from "react-router-dom";
 import styles from "./FruitSeason.module.css";
-import { Button } from "@chakra-ui/react";
 
 function FruitSeason(props) {
 
