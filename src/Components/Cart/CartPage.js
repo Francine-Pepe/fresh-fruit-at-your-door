@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Flex } from "@chakra-ui/react";
+import { Box, Container, Divider} from "@chakra-ui/react";
 import React from "react";
 import Cart from "./Cart";
 import styles from "./Cart.module.css";
@@ -9,7 +9,6 @@ function CartPage() {
       maxW="fullWidth"
       centerContent
       pt="10rem"
-      mb="10rem"
       className={styles.cart_page}
     >
       <Divider />
@@ -17,7 +16,7 @@ function CartPage() {
         <h1>Your Cart</h1>
       </strong>
       <Divider />
-      <Box pt="1rem" mb="10rem">
+      <Box pt="1rem" h="auto" mb="2rem" >
         <Cart />
       </Box>
     </Container>

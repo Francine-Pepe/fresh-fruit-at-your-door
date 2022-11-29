@@ -4,11 +4,11 @@ import { Container, Flex, Box, Divider } from "@chakra-ui/react";
 import styles from "./Products.module.css";
 import { NavLink } from "react-router-dom";
 import Loading from "../Loading/Loading";
-import {  useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { addCart } from "../Redux/Action";
 import { CartButtons } from "../../data";
 import PlusIcon from "../Icons/PlusIcon";
- 
+import CartBtn from "../Cart/CartBtn";
 
 function Product() {
   const { id } = useParams();
@@ -43,18 +43,14 @@ function Product() {
             centerContent
             boxShadow="0 0 2px 2px #cccc"
             borderRadius="5px"
-            p="2rem"
+            p="1.5rem"
+            sx={{
+              "@media screen and (max-width: 480px)": {
+                padding: 0,
+              },
+            }}
           >
-            <Flex
-              justifyContent="space-around"
-              alignItems="center"
-              w="100%"
-              sx={{
-                "@media screen and (max-width: 480px)": {
-                  flexWrap: "wrap"
-                },
-              }}
-            >
+            <Flex justifyContent="space-around" alignItems="center" w="100%">
               <img
                 src={product.image}
                 alt={product.name}
@@ -89,7 +85,7 @@ function Product() {
                       )
                     }
                   >
-                    <PlusIcon /> Add to cart
+                    <PlusIcon /> <h6>Add to cart</h6>
                   </button>
                   {CartButtons.map((data, index) => {
                     return (
@@ -124,7 +120,7 @@ function Product() {
     >
       <Divider />
       <strong>
-        <h1>{`${product.name}`}</h1>
+        <h1> {`${product.name}`} </h1>
       </strong>
       <Divider />
       <div>{loading ? <Loading /> : <ShowProduct />}</div>

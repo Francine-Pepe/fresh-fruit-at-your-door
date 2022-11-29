@@ -4,23 +4,24 @@
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   display: flex;
-  
+  bottom: 0;
 }
 
 .footer_content {
-  width: 33.33%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: "Source Serif Pro";
-  /* border: 1px solid red; */
 }
 
 .footer_content nav a {
-  color: #707070;
+  color: #f23d91;
+  font-weight: bold;
   padding: 0.5rem;
   display: block;
+  font-family: "Raleway Black";
 }
 
 .footer_content .fruit_season a {
@@ -40,6 +41,17 @@
 
 #footer_hr hr {
   display: none;
+}
+
+.growing_border {
+  width: 8rem;
+  padding-bottom: 2px;
+  border-bottom: 0px solid #ffc5e0;
+  transition: all .2s ease-in-out;
+  text-align: center;
+}
+.growing_border:hover {
+  border-bottom-width: 2px;
 }
 
 /* SocialMedia.js CSS */
@@ -72,7 +84,6 @@
   .footer_content {
     width: 100%;
     margin-top: 1rem;
-    /* padding: 2rem; */
   }
 
   #footer_hr {

@@ -37,6 +37,7 @@ function AboutUs(props) {
           return (
             <>
               <AboutUsProps
+                key={index}
                 image1={data.image1}
                 image2={data.image2}
                 image3={data.image3}

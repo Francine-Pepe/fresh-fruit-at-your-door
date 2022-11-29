@@ -9,7 +9,7 @@ function Home() {
       <div className={styles.home_top_content}>
         {homeText.map((data, index) => {
           return (
-            <div className={styles.home_text_container}>
+            <div className={styles.home_text_container} key={index}>
               <p>{data.text}</p>
             </div>
           );
