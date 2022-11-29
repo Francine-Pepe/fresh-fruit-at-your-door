@@ -6,6 +6,7 @@ The point of this project is work with FILTER and SHOPPING CART.
 
 ** Deployment on Github **
 
+0. Add the address name in the package.json ("homepage": "https://francine-pepe.github.io/fresh-fruit-at-your-door")
 1. npm install gh-pages --save-dev
 2. In the package.json file, scroll down to the scripts property and add the following commands:
 
