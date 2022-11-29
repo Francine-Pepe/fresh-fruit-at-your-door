@@ -57,5 +57,5 @@
     "json-loader": "^0.5.7"
   },
   "proxy": "http://localhost:3000/",
-  "homepage": "https://francine-pepe.github.io/freshfruitatyourdoor"
+  "homepage": "https://francine-pepe.github.io/fresh-fruit-at-your-door"
 }

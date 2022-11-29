@@ -15,7 +15,7 @@ import Checkout from "./Components/Cart/Checkout";
 function App(props) {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Navbar />
 
         <Routes>
