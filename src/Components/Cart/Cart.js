@@ -63,17 +63,18 @@ const Cart = () => {
                   <h1>{product.name}</h1>
                   <h2>Season: {product.category}</h2>
                   <h2>Origin: {product.origin}</h2>
-                  <p>
+                  <h2>
                     Price : {product.price} € / {product.unit} <br />
                     Qty : {product.qty} {product.unit} <br />
                     <strong>Total : {product.qty * product.price} €</strong>
-                  </p>
-                  <Flex gap="2rem" 
-                  sx={{
-                    "@media screen and (max-width: 250px)": {
-                      justifyContent: "center"
-                    },
-                  }}
+                  </h2>
+                  <Flex
+                    gap="2rem"
+                    sx={{
+                      "@media screen and (max-width: 250px)": {
+                        justifyContent: "center",
+                      },
+                    }}
                   >
                     <button onClick={() => handleDel(product)}>
                       <MinusIcon />
@@ -108,12 +109,12 @@ const Cart = () => {
           {CheckoutButtons.map((data, index) => {
             return (
               <>
-                <button className={styles.checkout_button} key={index}>
-                  {data.icon}
-                  <NavLink to={data.link}>
-                    <h6>{data.name}</h6>
-                  </NavLink>
-                </button>
+                  <button className={styles.checkout_button} key={index}>
+                    {data.icon}
+                    <NavLink to={data.link}>
+                      <h6>{data.name}</h6>
+                    </NavLink>
+                  </button>
               </>
             );
           })}

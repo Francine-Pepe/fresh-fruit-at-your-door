@@ -55,7 +55,7 @@ const CartBtn = (props) => {
             </div>
           </DrawerHeader>
 
-          <DrawerBody>
+          <DrawerBody >
             <Cart />
           </DrawerBody>
           <DrawerFooter justifyContent="center">
