@@ -2,7 +2,7 @@
 
 This is a Work based on a Fruit e-commerce, where you can buy Fruits filtered by season.
 
-The point of this project is work with FILTER and SHOPPING CART.
+The point of this project is to work with FILTER and SHOPPING CART.
 
 ** Deployment on Github **
 
