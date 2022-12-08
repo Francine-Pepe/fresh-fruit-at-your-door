@@ -20,13 +20,15 @@ function Products(props) {
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
+      
       const response = await fetch(
-        "https://fruits-api-project.herokuapp.com/fruits"
+        "https://fresh-fruit-apis-cmm2pvrju-francine-pepe.vercel.app/fruits", { mode: 'cors' }
       );
       if (componentMounted) {
         setData(await response.clone().json());
         setFilter(await response.json());
         setLoading(false);
+        
         console.log(filter);
       }
       return () => {
