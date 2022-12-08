@@ -22,7 +22,7 @@ function Products(props) {
       setLoading(true);
       
       const response = await fetch(
-        "https://fresh-fruit-apis-cmm2pvrju-francine-pepe.vercel.app/fruits", { mode: 'cors' }
+        "https://fresh-fruit-apis.vercel.app/fruits", { mode: 'cors' }
       );
       if (componentMounted) {
         setData(await response.clone().json());

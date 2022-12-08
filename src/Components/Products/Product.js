@@ -25,7 +25,7 @@ function Product() {
     const getProduct = async () => {
       setLoading(true);
       const response = await fetch(
-        `https://fresh-fruit-apis-cmm2pvrju-francine-pepe.vercel.app/fruits/${id}`, { mode: 'cors' }
+        `https://fresh-fruit-apis.vercel.app/fruits/${id}`, { mode: 'cors' }
       );
       setProduct(await response.json());
       setLoading(false);
