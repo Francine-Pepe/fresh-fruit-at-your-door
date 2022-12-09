@@ -7,8 +7,9 @@ import PlusIconProduct from "../Icons/PlusIconProduct";
 import { addCart, delCart } from "../Redux/Action";
 import styles from "./Cart.module.css";
 import { CheckoutButtons } from "../../data";
+import Checkout from "./Checkout";
 
-const Cart = () => {
+const Cart = (props) => {
   const state = useSelector((state) => state.handleCart);
   const dispatch = useDispatch();
 
@@ -109,12 +110,12 @@ const Cart = () => {
           {CheckoutButtons.map((data, index) => {
             return (
               <>
-                  <button className={styles.checkout_button} key={index}>
-                    {data.icon}
-                    <NavLink to={data.link}>
-                      <h6>{data.name}</h6>
-                    </NavLink>
-                  </button>
+                <button className={styles.checkout_button} key={index}>
+                  {data.icon}
+                  <NavLink to={data.link}>
+                    <h6>{data.name}</h6>
+                  </NavLink>
+                </button>
               </>
             );
           })}

@@ -8,7 +8,14 @@ function ContinueReadingButton() {
     <div className={styles.how_it_works_preview}>
       {howItWorksText.map((data, index) => (
         <button key={index}>
-          <NavLink to={data.link}>{data.button}</NavLink>
+          <NavLink
+            to={data.link}
+            onClick={() => {
+              window.scroll(0, 0);
+            }}
+          >
+            {data.button}
+          </NavLink>
         </button>
       ))}
     </div>

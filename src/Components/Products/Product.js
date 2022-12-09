@@ -9,6 +9,8 @@ import { addCart } from "../Redux/Action";
 import { CartButtons } from "../../data";
 import PlusIcon from "../Icons/PlusIcon";
 import CartBtn from "../Cart/CartBtn";
+import CartAlert from "../Alert/CartAlert";
+import swal from "sweetalert";
 
 function Product() {
   const { id } = useParams();
@@ -25,7 +27,8 @@ function Product() {
     const getProduct = async () => {
       setLoading(true);
       const response = await fetch(
-        `https://fresh-fruit-apis.vercel.app/fruits/${id}`, { mode: 'cors' }
+        `https://fresh-fruit-apis.vercel.app/fruits/${id}`,
+        { mode: "cors" }
       );
       setProduct(await response.json());
       setLoading(false);
@@ -79,9 +82,12 @@ function Product() {
                     onClick={() =>
                       addProduct(
                         product,
-                        alert(
-                          `Your ${product.name} was sucessfully added to the cart`
-                        )
+                        swal({
+                          title: "Fresh Fruit at your door",
+                          text: `Your ${product.name} was sucessfully added to the cart`,
+                          icon: "success",
+                          button: "Close"
+                        })
                       )
                     }
                   >

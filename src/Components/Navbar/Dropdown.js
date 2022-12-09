@@ -17,10 +17,7 @@ function Dropdown() {
   return (
     <div className={styles.dropdown_menu}>
       <Menu>
-        <Flex
-          className={styles.cart_btn_mobile}
-          justifyContent="space-between"
-        >
+        <Flex className={styles.cart_btn_mobile} justifyContent="space-between">
           <CartBtn />
           <MenuButton
             w={8}
@@ -44,7 +41,14 @@ function Dropdown() {
                         className={styles.nav_button}
                         _focus={{ bg: "transparent" }}
                       >
-                        <NavLink to={data.link}>{data.name}</NavLink>
+                        <NavLink
+                          to={data.link}
+                          onClick={() => {
+                            window.scroll(0, 0);
+                          }}
+                        >
+                          {data.name}
+                        </NavLink>
                       </MenuItem>
                       <Divider w="50vw" />
                     </li>

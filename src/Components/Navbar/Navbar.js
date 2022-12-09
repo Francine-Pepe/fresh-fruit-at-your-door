@@ -23,7 +23,19 @@ const Navbar = (props) => {
               return (
                 <>
                   <li className={styles.navbar} key={index}>
-                    <NavLink to={data.link} className={styles.growing_border}>{data.name}</NavLink>
+                    <NavLink
+                      to={data.link}
+                      className={styles.growing_border}
+                      onClick={() => {
+                        window.scroll({
+                          top: 0,
+                          left: 0,
+                          behavior: "smooth",
+                        });
+                      }}
+                    >
+                      {data.name}
+                    </NavLink>
                   </li>
                 </>
               );

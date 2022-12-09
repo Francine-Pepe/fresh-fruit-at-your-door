@@ -91,9 +91,23 @@
   }
 
   .home_text_container p {
-    font-size: 13px;
+    font-size: 18px;
     padding: 1.5rem;
   }
+}
+
+@media only screen and (max-width: 414px) {
+   .home_text_container p {
+    font-size: 18px;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 372px) {
+  .home_text_container p {
+   font-size: 15px;
+   padding: 1rem;
+ }
 }
 
 @media only screen and (max-width: 350px) {

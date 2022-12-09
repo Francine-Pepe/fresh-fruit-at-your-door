@@ -29,7 +29,13 @@ function Footer(props) {
           {navData.map((data, index) => {
             return (
               <nav key={index}>
-                <NavLink to={data.link} className={styles.growing_border}>
+                <NavLink
+                  to={data.link}
+                  className={styles.growing_border}
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                >
                   {data.name}
                 </NavLink>
               </nav>

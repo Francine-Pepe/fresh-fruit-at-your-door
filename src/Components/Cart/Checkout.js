@@ -12,7 +12,7 @@ function Checkout() {
           </div>
           <div>
             <p>
-              Thanks for buying with Fresh Fruit at your door. Your goodies are being separated for you.
+              Thanks for buying with Fresh Fruit at your door. Your Fruits are being separated for you.
             </p>
           </div>
           <div>
