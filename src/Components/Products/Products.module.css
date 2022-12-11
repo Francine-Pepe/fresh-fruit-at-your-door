@@ -191,10 +191,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @media screen and (max-width: 402px) {
   .product_modal_button h6 {
-    display: none;
+    font-size: 0.6rem;
   }
   .product_modal_button {
-    gap: 0;
+    gap: 0.1rem;
   }
 }
 

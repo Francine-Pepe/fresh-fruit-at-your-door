@@ -1,4 +1,10 @@
-import { Box, Container, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  useDisclosure,
+  CloseButton,
+} from "@chakra-ui/react";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
@@ -7,7 +13,7 @@ import PlusIconProduct from "../Icons/PlusIconProduct";
 import { addCart, delCart } from "../Redux/Action";
 import styles from "./Cart.module.css";
 import { CheckoutButtons } from "../../data";
-import Checkout from "./Checkout";
+import swal from "sweetalert";
 
 const Cart = (props) => {
   const state = useSelector((state) => state.handleCart);
@@ -20,9 +26,13 @@ const Cart = (props) => {
     dispatch(delCart(item));
   };
 
+  // Drawer
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
+
   const emptyCart = () => {
     return (
-      <Container maxW="container.md" h="auto" pt="10rem">
+      <Container maxW="container.md" h="auto" p="2rem">
         <Flex
           flexDirection="column"
           justifyContent="center"
@@ -31,6 +41,11 @@ const Cart = (props) => {
           <Box>
             <h3>Your Cart is Empty</h3>
           </Box>
+          <button className={styles.go_to_products_button}>
+            <NavLink to={"/products"}>
+              <h6>Go to: Products</h6>
+            </NavLink>
+          </button>
         </Flex>
       </Container>
     );
@@ -110,9 +125,19 @@ const Cart = (props) => {
           {CheckoutButtons.map((data, index) => {
             return (
               <>
-                <button className={styles.checkout_button} key={index}>
+                <button
+                  className={styles.checkout_button}
+                  key={index}
+                  onClick={() =>
+                    swal({
+                      text: `You didn´t go directly to the ${data.name} Page 😞 ? Please close Your Cart window. Sorry for the inconvenience`,
+                      button: "Ok",
+                    })
+                  }
+                >
                   {data.icon}
-                  <NavLink to={data.link}>
+
+                  <NavLink to={data.link} onClose={onClose}>
                     <h6>{data.name}</h6>
                   </NavLink>
                 </button>

@@ -36,26 +36,28 @@ const CartBtn = (props) => {
         placement="right"
         onClose={onClose}
         finalFocusRef={btnRef}
+        backgroundColor="rgba(250,250,250, 0.5)"
         sx={{
           "@media screen and (max-width: 480px)": {
-            width: "50vw"
+            width: "40vw",
           },
         }}
       >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
           <DrawerHeader>
             <div className={styles.cart_page}>
               <Divider />
               <strong>
                 <h1>Your Cart</h1>
               </strong>
+
               <Divider />
             </div>
+            <DrawerCloseButton />
           </DrawerHeader>
 
-          <DrawerBody >
+          <DrawerBody>
             <Cart />
           </DrawerBody>
           <DrawerFooter justifyContent="center">

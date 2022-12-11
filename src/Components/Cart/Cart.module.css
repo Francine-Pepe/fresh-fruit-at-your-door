@@ -37,7 +37,8 @@
   margin-top: 3rem;
 }
 
-.checkout_button {
+.checkout_button,
+.go_to_products_button {
   width: 40%;
   padding: 0.5rem;
   font-size: 0.7rem;
@@ -49,20 +50,24 @@
   justify-content: space-evenly;
 }
 
-.checkout_button:hover {
+.checkout_button:hover,
+.go_to_products_button:hover {
   color: #ffffff;
   font-weight: bold;
   background: linear-gradient(to right, #39bf99 50%, white 50%);
   background-size: 200% 100%;
   transition: all 0.5s ease-out;
   background-position: right bottom;
-
 }
 
-.checkout_button:hover {
+.checkout_button:hover,
+.go_to_products_button:hover {
   background-position: left bottom;
 }
 
+.go_to_products_button {
+  margin-top: 1rem;
+}
 .checkout_button_container {
   margin: 2rem 0;
 }
@@ -181,14 +186,13 @@
   .cart_container img {
     margin-right: 0.5rem;
   }
-} 
+}
 
 @media screen and (max-width: 252px) {
   .checkout_button {
     width: 95%;
-    
   }
-} 
+}
 
 @media screen and (max-width: 250px) {
   .cart_container img {
