@@ -203,7 +203,7 @@ function Products(props) {
                         </Flex>
                         <button className={styles.buy_now_button}>
                           <BasketIcon />
-                          <NavLink to={`/products/${id}`}>Buy now</NavLink>
+                          <NavLink to={`/products/${id}`}>Go to this product</NavLink>
                         </button>
                       </Flex>
                     </Box>
