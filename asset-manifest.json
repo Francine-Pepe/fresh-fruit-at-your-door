@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fresh-fruit-at-your-door/static/css/main.779f0da1.css",
-    "main.js": "/fresh-fruit-at-your-door/static/js/main.a68945c3.js",
+    "main.css": "/fresh-fruit-at-your-door/static/css/main.3d596aef.css",
+    "main.js": "/fresh-fruit-at-your-door/static/js/main.be130a53.js",
     "static/js/787.0b6ac962.chunk.js": "/fresh-fruit-at-your-door/static/js/787.0b6ac962.chunk.js",
     "static/media/aboutU_woodBox.jpg": "/fresh-fruit-at-your-door/static/media/aboutU_woodBox.da95023706453283410e.jpg",
     "static/media/aboutUs_appleBox.jpg": "/fresh-fruit-at-your-door/static/media/aboutUs_appleBox.337688acc83e6ee393b4.jpg",
@@ -26,12 +26,12 @@
     "static/media/delivery-truck.png": "/fresh-fruit-at-your-door/static/media/delivery-truck.fa367f7e64b3d5101203.png",
     "static/media/alle.png": "/fresh-fruit-at-your-door/static/media/alle.ce2a47129f31687bf061.png",
     "index.html": "/fresh-fruit-at-your-door/index.html",
-    "main.779f0da1.css.map": "/fresh-fruit-at-your-door/static/css/main.779f0da1.css.map",
-    "main.a68945c3.js.map": "/fresh-fruit-at-your-door/static/js/main.a68945c3.js.map",
+    "main.3d596aef.css.map": "/fresh-fruit-at-your-door/static/css/main.3d596aef.css.map",
+    "main.be130a53.js.map": "/fresh-fruit-at-your-door/static/js/main.be130a53.js.map",
     "787.0b6ac962.chunk.js.map": "/fresh-fruit-at-your-door/static/js/787.0b6ac962.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.779f0da1.css",
-    "static/js/main.a68945c3.js"
+    "static/css/main.3d596aef.css",
+    "static/js/main.be130a53.js"
   ]
 }
