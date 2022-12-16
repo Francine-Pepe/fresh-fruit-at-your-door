@@ -4,12 +4,10 @@ import { Container, Flex, Box, Divider } from "@chakra-ui/react";
 import styles from "./Products.module.css";
 import { NavLink } from "react-router-dom";
 import Loading from "../Loading/Loading";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addCart } from "../Redux/Action";
 import { CartButtons } from "../../data";
 import PlusIcon from "../Icons/PlusIcon";
-import CartBtn from "../Cart/CartBtn";
-import CartAlert from "../Alert/CartAlert";
 import swal from "sweetalert";
 
 function Product() {

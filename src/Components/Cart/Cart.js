@@ -13,7 +13,7 @@ import PlusIconProduct from "../Icons/PlusIconProduct";
 import { addCart, delCart } from "../Redux/Action";
 import styles from "./Cart.module.css";
 import { CheckoutButtons } from "../../data";
-import swal from "sweetalert";
+// import swal from "sweetalert";
 
 const Cart = (props) => {
   const state = useSelector((state) => state.handleCart);
@@ -128,12 +128,12 @@ const Cart = (props) => {
                 <button
                   className={styles.checkout_button}
                   key={index}
-                  onClick={() =>
-                    swal({
-                      text: `You didn´t go directly to the ${data.name} Page 😞 ? Please close Your Cart window. Sorry for the inconvenience`,
-                      button: "Ok",
-                    })
-                  }
+                  // onClick={() =>
+                  //   swal({
+                  //     text: `You didn´t go directly to the ${data.name} Page 😞 ? Please close Your Cart window. Sorry for the inconvenience`,
+                  //     button: "Ok",
+                  //   })
+                  // }
                 >
                   {data.icon}
 
